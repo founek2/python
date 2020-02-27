@@ -1,10 +1,13 @@
 # 1. Lekce
+> Stolní pc:
+>   * user: Guest
+>   * password: Akademie19
 
 ## Co je python?
 * skriptovací programovací jazyk
     * výchozí interpret CPython
 * Vznikl 1991
-* často využíván v OS Linux
+* často využíván v OS Linux, Data science
 * dobře čitelný - narozdíl od Javy C++ a jiných
 
 ## Jak ho zapnout?
@@ -35,43 +38,11 @@ Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při vo
 ## Základní vestavěné funkce (built-in)
 * ```print()``` - parametry: co chci vypsat
 * ```input()``` - parametr: text který se zobrazí uživateli
-* ```range()``` - parametry: (od, do, krok) - do je exkluzivní, tedy range(1, 9) vypíše čísla 1-8
+* ```range()``` - parametry: (od, do, krok) - do je exkluzivní, tedy range(1, 9) jsou čísla 1-8
 * ```len()``` - parametr: textový řetězec (vrátí počet jeho znaků)
 
 
-## Cykly
-```python
-for number in range(1, 10):
-    print(number)   # vypíše všechna čísla od 1 do 9
-
-for number in range(1, 10):
-    if number == 2:
-        print(number)   # vypíše poze číslo 2
-
-for number in range(1, 10):
-    if 2 <= number <= 8:    # specialita Pythonu
-        print(number)   # vypíše číslo v rozmezí daném podmínkou
-```
-
-## Odsazení místo závorek
-Z výše uvedených ukáze je viděť, že python nepoužívá závorky pro uvození bloku jako C jazyky, ale nad blokem je řádek končící dvojtečkou a pak každý rádek, který je odsazen patří do bloku. Blok končí prvním řádkem, který nemá dané odsazení. Je potřeba si na dosazování dávat pozor, protože rozdíl v jedné mezeře může vyvolat chybu. Bloky lze také libovolně vnočovat.
-```python
-for number in range(1, 10):             <- začátek bloku1
-    print("Strahov je životní styl")
-   _
-   └───odsazení
-
-    for number2 in range(1, 10):         <- nový vnořený blok2
-        print(number)                   <- kód vnořeného bloku2
-        print(number2)
-    promnena = number + 1               <- uzavření bloku2 a kód pro blok1
-    print("hodnota", promnena)
-                                        <- uzavření bloku1
-print("konec programu")                 <- globální kód
-```
-
 ## Cičení
-<!-- TODO pro nápovědu udělat api counter -->
 ### 1.1.x Čísla
 * Sečtěte čísla 1, 5 a 98
 * Spočítejnte třetí mocninu čísla 11
@@ -121,10 +92,42 @@ Vypište následující text s použitím pouze jednoho volání funkce print, `
 Jmenuji se {vaše jméno} a na Strahově jsem již {počet} let
 ```
 
+## Cykly
+```python
+for number in 0,1,2,3,4,5,6:
+    print(number)   # vypíše všechna čísla od 1 do 9
+
+for number in range(7):
+    if number == 2:
+        print(number)   # vypíše poze číslo 2
+
+for number in range(1, 10):
+    if 2 <= number <= 8:    # specialita Pythonu
+        print(number)   # vypíše číslo v rozmezí daném podmínkou
+```
+
+## Odsazení místo závorek
+Z výše uvedené ukázky je viděť, že python nepoužívá závorky pro uvození bloku jako C jazyky, ale nad blokem je řádek končící dvojtečkou a pak každý rádek, který je odsazen patří do bloku. Blok končí prvním řádkem, který nemá dané odsazení. Je potřeba si na odsazení dávat pozor, protože rozdíl v jedné mezeře může vyvolat chybu. Bloky lze také libovolně vnořovat.
+
+```python
+for number in range(1, 10):             <- začátek bloku1
+    print("Strahov je životní styl")
+   _
+   └───odsazení
+
+    for number2 in range(1, 10):         <- nový vnořený blok2
+        print(number)                   <- kód vnořeného bloku2
+        print(number2)
+    promnena = number + 1               <- uzavření bloku2 a kód pro blok1
+    print("hodnota", promnena)
+                                        <- uzavření bloku1
+print("konec programu")                 <- globální kód
+```
+
 ### 1.3.x Cykly
 * Vypište přesně 11x vaše jméno
 * Sečtěte všechna čísla od 0 do 49
 * vypište všechna lichá čísla z intervalu <7, 19>
 
 ### 1.4 Kalkulačka - zjednodušená
-Vytvořte program, který se uživatele zeptá nejprve na jedno číslo, potom na druhé a nakonec na matematický operátor. Tyto 3 vstupy uložte do přemněných a pomocí podmínek otestujte jestli operátor je jeden z `+ - * /`, pokud ano, tak spočítejte hodnotu výrazu a zobrazte uživateli, pokud operátor není jeden z povolených, tak vypište nějaký text jako chybu a zavolejte funkci `exit` s parametrem 1 - funkce ukončí běh programu a číslo 1 signalizuje, že nastala chyba. 
+Vytvořte program, který se uživatele zeptá nejprve na jedno číslo, potom na druhé a nakonec na matematický operátor. Tyto 3 vstupy uložte do přemněných a pomocí podmínek otestujte jestli operátor je jeden z `+ - * /`, pokud ano, tak spočítejte hodnotu výrazu a zobrazte uživateli, pokud operátor není jeden z povolených, tak vypište nějaký text jako chybu a zavolejte funkci `exit` s parametrem 1 - funkce exit ukončí běh programu a číslo 1 signalizuje, že nastala chyba. 

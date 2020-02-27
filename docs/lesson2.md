@@ -35,7 +35,7 @@ for prvek in ntice:
 
 ### 2.1.x Cvičení na pole
 * Vytvořte promněnou s prázdnám polem a vložte do něj prvky 0 až 99 (nedělejte to manuálně, ale použijte cyklus). Následně vypište každý třetí prvek.
-* TODO
+* Vytvořte pole s alespoň 10 čísly a následně spočítejte průměr hodnot
 
 ## Funkce pokračování
 V první lekci jsme si ukázali jak funkci zavolat, nyní si ukáže jak si můžeme vytvořit svoji vlastní. Používá se pro to klíčové slovo `def`, za kterým následuje název naší funkce a v závorkách názvy promněných do která se nám vloží argumentu, pokud naší funkci někdo zavolá.
@@ -70,5 +70,22 @@ numbers = [1, 2, 4]
 show(numbers) # -> nic nemusí vracet
 ```
 
-### 2.2.3 Kalkulačka podruhé
-Program se zeptá na číslo, operátor, číslo -> ověří že čísla jsou čísla a operátor je známý operátor (pokud operátor neznáme, tak vypíšeme hlášku "neznámí operátor" a ptáme se na něj znovu) -> ukáže výsledek a znovu se ptá, okud uživatel vloží nyní jako první operátor a pak číslo, tak kalkulačka spočte `předchozí výsledek - operátor - nové číslo` a ukáže výsledek. Takto lze opakovat do nekonečna. Program se ukončí pokud kdykoliv na vstup uživatel napíše q.
+### 2.2.3
+Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci add, kterou jste si napsali)
+
+### 2.2.4
+Napište tyto 3 funkce:
+* `inc` - parametr dostane list čísel a její úkol je přičíst ke každému číslu 1 a list vrátit
+* `maxList` - parametr dostane pole čísel a vrátí maximum
+* `minList` - parametr dostane pole čísel a vrátí minimum
+* `sumList` - parametr dostane pole čísel a vrátí součet
+Vytvořte skript, který se zeptá uživatele na čísla oddělená čárkou. Načte vstup jako string, potom pomocí metody `split` převede na list a následně vypíše zajímavé statistiky v tomto formátu:
+```text
+min: {minimální prvek}
+max: {maximální prvek}
+sum: {součet}
+inc: {list s hodnotami zvětšenými o 1}
+```
+
+### 2.2.5 Kalkulačka podruhé
+Program se zeptá na číslo, operátor, číslo -> ověří že čísla jsou čísla a operátor je známý operátor (pokud operátor neznáme, tak vypíšeme hlášku "neznámý operátor" a zeptáme se na něj znovu) -> ukáže výsledek a znovu se ptá, pokud uživatel vloží nyní jako první operátor a pak číslo, tak kalkulačka spočte `předchozí výsledek, operátor, nové číslo` a ukáže výsledek. Takto lze opakovat do nekonečna. Program se ukončí pokud kdykoliv na vstup uživatel napíše 'q'.
