@@ -57,7 +57,7 @@ Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při vo
 > * `%` zbytek po dělení 9 % 2 -> 1
 > * `**` umocní číslo před operátorem na číslo za operátorem 2 ** 3 -> 8
 
-### Řetězce
+## Řetězce
 U řetězcu se dá doptat na jednotlivé znaky pomocí pozice. Pozice vždy začíná na 0 a získat n-tý znak se dá takto:
 ```python
 text = "Nice kitty"
@@ -78,7 +78,7 @@ Dále funguje také dotazování na pozice od zadu (záporná adresace). Posledn
 * vypište 3. znak z vašeho jména
 * vypište poslední znak z vašeho jména
 
-> ### Řetězce formátování
+> ## Řetězce formátování
 > Jednotlivé řetězce jsou spojovat pomoci operátoru `+` nebo lze využít moderní přístup tzv. f-strings. Stačí před úvozovky řetězce dát písmeno `f` a v řetezci lze do závorek `{}` napsat promněnou, která si při zpracování nahradí svojí hodnotou.
 > ```python
 > game = 'Lineage II'
@@ -86,7 +86,7 @@ Dále funguje také dotazování na pozice od zadu (záporná adresace). Posledn
 > f'Moje neoblíbenější pc hra je {game}'        # výstup -> "Moje neoblíbenější pc hra je Lineage II"
 > ```
 
-#### 1.2.4 Řetězce
+### 1.2.4 Řetězce
 Vypište následující text s použitím pouze jednoho volání funkce print, `jméno` a `počet` nepište do textu napřímo ale uložte si je do promněné a ty využijte pro výpis.
 ```python
 Jmenuji se {vaše jméno} a na Strahově jsem již {počet} let

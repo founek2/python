@@ -70,10 +70,10 @@ numbers = [1, 2, 4]
 show(numbers) # -> nic nemusí vracet
 ```
 
-### 2.2.3
+### 2.2.3 Výpočet součtu
 Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci add, kterou jste si napsali)
 
-### 2.2.4
+### 2.2.4 Statistika pole
 Napište tyto 3 funkce:
 * `inc` - parametr dostane list čísel a její úkol je přičíst ke každému číslu 1 a list vrátit
 * `maxList` - parametr dostane pole čísel a vrátí maximum
@@ -85,6 +85,7 @@ min: {minimální prvek}
 max: {maximální prvek}
 sum: {součet}
 inc: {list s hodnotami zvětšenými o 1}
+orig: {list s původními hodnotami}
 ```
 
 ### 2.2.5 Kalkulačka podruhé
