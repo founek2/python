@@ -107,6 +107,8 @@ show(numbers) # -> nic nemusí vracet
 ### 2.3.3 Výpočet součtu
 Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci add, kterou jste si napsali)
 
+# Pravděpodobně až 3. lekce
+
 ## Str - split
 Na každý řetězec lze zavolat metodu split, která nám umožňuje rozdělit řetězec na víc částí. Jako parametr se udává oddělovač, který split bude hledat v řetězci a v daném místě provede rozdělení. Návratová hodnota je List obsahující jednotlivé části.
 ```python
