@@ -2,7 +2,29 @@
 
 ## Proměnné II
 * jmenná konvence - angličtina, popisné názvy
-* snake case - např. `barva_auta`
+* snake case - např. `car_color`
+
+## "Rozloučení" s interaktivním módem
+Interpretr v interaktivním módu je užitečná věc, pokud si potřebujeme vyzkoušet 1 - 3 řádkové přikazy. Pokud ale chceme psát delší skripty nebo mít možnost se vracet do historie a opakovaně spouště více řádkl, tak tento řežim je velmi nepraktický. Proto si ukážeme jak spustit skript, který je uložený v souboru. Ale nebojte, s interaktivním režimem se jistě ještě potkáme a velice ho doporučují, pokud si potřebujete vyzkoušet několiká málo řádkové příkazy - velmi se hodí. Jak vlastně spustit soubory s python kódem? (název našeho souboru je muj_skript.py)
+```bash
+python3 muj_skript.py
+```
+
+
+### 1.4 Kalkulačka - zjednodušená
+Vytvořte program, který se uživatele zeptá nejprve na jedno číslo, potom na druhé a nakonec na matematický operátor. Tyto 3 vstupy uložte do přemněných a pomocí podmínek otestujte jestli operátor je jeden z `+ - * /`, pokud ano, tak spočítejte hodnotu výrazu a zobrazte uživateli, pokud operátor není jeden z povolených, tak vypište nějaký text jako chybu a zavolejte funkci `exit` s parametrem 1 - funkce exit ukončí běh programu a číslo 1 signalizuje, že nastala chyba. 
+
+<!-- Komentáře v Pythonu? -->
+
+## Konstruktory primitivů
+Není '3' (textový řetězec) stejné jako 3 (celé číslo)
+* 3 / `int`
+* 0\. / `float`
+* `bool`
+* `str()`
+* `[]` / `list`
+* `,` / `tuple`
+
 
 ## Range parametry
 Funkci range lze zavolat s různým počtem parametrů. Pokud dostane pouze jeden argument `n`, tak vrátí posloupnost začínající od 0 s n prvky -> tedy 0,1,2,...,n-1  
@@ -44,7 +66,10 @@ for prvek in ntice:
 
 ### 2.1.x Cvičení na pole
 * Vytvořte promněnou s prázdnám polem a vložte do něj prvky 0 až 99 (nedělejte to manuálně, ale použijte cyklus). Následně vypište každý třetí prvek.
-* Vytvořte pole s alespoň 10 čísly a následně spočítejte průměr hodnot
+* Vytvořte list s alespoň 10 čísly a následně spočítejte průměr z hodnot
+
+### 2.2.1 Kalkulačka - zjednodušená II
+Využijte již naprogramovanou zjednodušenou kalkulačku, ale místo použití 3 promněných pro každou hodnotu, která se načítá od uživatele využijte list a cyklus. Stejně tak pro hlášky, které vypisujete uživateli.
 
 ## Funkce pokračování
 V první lekci jsme si ukázali jak funkci zavolat, nyní si ukáže jak si můžeme vytvořit svoji vlastní. Používá se pro to klíčové slovo `def`, za kterým následuje název funkce a v závorkách názvy promněných do která se nám vloží parametry, pokud naší funkci někdo zavolá a nějaká parametry zadá.
@@ -70,7 +95,7 @@ else:
     print('Unable to kill')
 ```
 
-### 2.2.x Cvičení funkce
+### 2.3.x Cvičení funkce
 * napište funkci `add`, která vezme dva argumenty a vrátí jejich součet
 ```add(4, 6) -> 10```
 * napište funkci `show` která vypíše obsah listu do výstupu, který dostane jako parametr
@@ -79,7 +104,7 @@ numbers = [1, 2, 4]
 show(numbers) # -> nic nemusí vracet
 ```
 
-### 2.2.3 Výpočet součtu
+### 2.3.3 Výpočet součtu
 Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci add, kterou jste si napsali)
 
 ## Str - split
@@ -89,7 +114,7 @@ text = 'Příliš žluťoučký kůň úpěl ďábelské ódy'
 text.split(' ')     # -> ['Příliš', 'žluťoučký', 'kůň', 'úpěl', 'ďábelské', 'ódy']
 ```
 
-### 2.2.4 Statistika listu
+### 2.3.4 Statistika listu
 Napište tyto 3 funkce:
 * `inc` - parametr dostane list čísel a její úkol je přičíst ke každému číslu 1 a list vrátit
 * `maxList` - parametr dostane list čísel a vrátí maximum
@@ -103,16 +128,34 @@ sum: {součet}
 inc: {list s hodnotami zvětšenými o 1}
 orig: {list s původními hodnotami}
 ```
+Použijte naivní řešení - cyklem projdete pole a v globální promněné budete mít minimum (analogicky max), které porovnánte se všemi prvky
 
-## Konstruktory primitivů
-Není '3' (textový řetězec) stejné jako 3 (celé číslo)
-* 3 / `int`
-* 0\. / `float`
-* `bool`
-* `str()`
-* `[]` / `list`
-* `,` / `tuple`
+## While cyklus
+```python
+i = 0
+while i < 10:
+    ... # some magic
 
+    print(i)
+    i += 1
 
-### 2.2.5 Kalkulačka podruhé
+for i in range(10):
+    ...
+
+    print(i)
+
+# Výstup obou cyklů bude identický - vypíší čísla od 0 až do 9
+```
+Cyklus while se nejčastěji využívá pokud předem nevíme kolikrát budeme potřebovat kód zopakovat. Můžeme v průběhu měnit hodnotu řídící promněné - snižovat/zvyšovat. Díky tomu získáme cyklus s promněnou délkou opakování. Další časté využití:
+```python
+running = True
+while running:
+    ... # some magic
+
+    if promnena == 3:
+        running = False
+```
+
+<!-- Nejprve napsat vše do cyklu, potom vylepšit separací kódu do funkce-->
+### 2.3.5 Kalkulačka podruhé
 Program se zeptá na číslo, operátor, číslo -> ověří že čísla jsou čísla a operátor je známý operátor (pokud operátor neznáme, tak vypíšeme hlášku "neznámý operátor" a zeptáme se na něj znovu) -> ukáže výsledek a znovu se ptá, pokud uživatel vloží nyní jako první operátor a pak číslo, tak kalkulačka spočte `předchozí výsledek, operátor, nové číslo` a ukáže výsledek. Takto lze opakovat do nekonečna. Program se ukončí pokud kdykoliv na vstup uživatel napíše 'q'.

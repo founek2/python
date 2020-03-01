@@ -128,6 +128,3 @@ print("konec programu")                 <- globální kód
 * Vypište přesně 11x vaše jméno
 * Sečtěte všechna čísla od 0 do 49
 * vypište všechna lichá čísla z intervalu <7, 19>
-
-### 1.4 Kalkulačka - zjednodušená
-Vytvořte program, který se uživatele zeptá nejprve na jedno číslo, potom na druhé a nakonec na matematický operátor. Tyto 3 vstupy uložte do přemněných a pomocí podmínek otestujte jestli operátor je jeden z `+ - * /`, pokud ano, tak spočítejte hodnotu výrazu a zobrazte uživateli, pokud operátor není jeden z povolených, tak vypište nějaký text jako chybu a zavolejte funkci `exit` s parametrem 1 - funkce exit ukončí běh programu a číslo 1 signalizuje, že nastala chyba. 
