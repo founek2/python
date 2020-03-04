@@ -5,28 +5,39 @@
 * snake case - např. `car_color`
 
 ## "Rozloučení" s interaktivním módem
-Interpretr v interaktivním módu je užitečná věc, pokud si potřebujeme vyzkoušet 1 - 3 řádkové přikazy. Pokud ale chceme psát delší skripty nebo mít možnost se vracet do historie a opakovaně spouště více řádkl, tak tento řežim je velmi nepraktický. Proto si ukážeme jak spustit skript, který je uložený v souboru. Ale nebojte, s interaktivním režimem se jistě ještě potkáme a velice ho doporučují, pokud si potřebujete vyzkoušet několiká málo řádkové příkazy - velmi se hodí. Jak vlastně spustit soubory s python kódem? (název našeho souboru je muj_skript.py)
+Interpretr v interaktivním módu je užitečná věc, pokud si potřebujeme vyzkoušet 1 - 3 řádkové přikazy. Pokud ale chceme psát delší skripty nebo mít možnost se vracet do historie a opakovaně spouště více řádků, tak tento řežim je velmi nepraktický. Proto si ukážeme jak spustit skript, který je uložený v souboru. Ale nebojte, s interaktivním režimem se jistě ještě potkáme a velice ho doporučují, pokud si potřebujete vyzkoušet několiká málo řádkové příkazy - velmi se hodí. Jak vlastně spustit soubory s python kódem? (název souboru s kódem je muj_skript.py)
 ```bash
 python3 muj_skript.py
 ```
 
 
 ### 1.4 Kalkulačka - zjednodušená
-Vytvořte program, který se uživatele zeptá nejprve na jedno číslo, potom na druhé a nakonec na matematický operátor. Tyto 3 vstupy uložte do přemněných a pomocí podmínek otestujte jestli operátor je jeden z `+ - * /`, pokud ano, tak spočítejte hodnotu výrazu a zobrazte uživateli, pokud operátor není jeden z povolených, tak vypište nějaký text jako chybu a zavolejte funkci `exit` s parametrem 1 - funkce exit ukončí běh programu a číslo 1 signalizuje, že nastala chyba. 
+Vytvořte program, který se uživatele zeptá nejprve na jedno číslo, matematický operátor a nakonec na druhé číslo. Tyto 3 vstupy uložte do přemněných a pomocí podmínek otestujte jestli operátor je jeden z `+ - * /`, pokud ano, tak spočítejte hodnotu výrazu a zobrazte ji uživateli. Pokud operátor není jeden z povolených, tak vypište nějaký text jako chybovou hlášku a zavolejte funkci `exit` s parametrem 1 - funkce exit ukončí běh programu a číslo 1 signalizuje, že nastala chyba. 
 
-<!-- Komentáře v Pythonu? -->
+## Komentáře v kóde
+```python
+# tento blok dělá nějaký
+# magic
+if 99 < 10 and 30 > 1:
+    ...
+
+"""
+Víceřádkový dokumentační
+řetězec - primárně pro komentáře funkcí/objektů
+"""
+```
 
 ## Konstruktory primitivů
 Není '3' (textový řetězec) stejné jako 3 (celé číslo)
 * 3 / `int`
 * 0\. / `float`
 * `bool`
-* `str()`
-* `[]` / `list`
-* `,` / `tuple`
+* `''` / `""` / `str()`
+* `[]` / `list()`
+* `,` / `tuple()`
 
 
-## Range parametry
+## Fce Range - parametry
 Funkci range lze zavolat s různým počtem parametrů. Pokud dostane pouze jeden argument `n`, tak vrátí posloupnost začínající od 0 s n prvky -> tedy 0,1,2,...,n-1  
 Pokud předáme parametry 2 např. `range(2, 10)`, tak návratová hodnotu bude posloupnost začínající číslem 2 s 10 prvky -> tedy 2,3,4,...,9  
 Další možnost je předat parametry 3 např. `range(1, 10, 2)`. První parametr opět udává počátek posloupnosti a druhý počet prvků, třetí parametr určuje krok. Tedy v našem případě výsledná posloupnost bude 1,3,5,7,9
