@@ -30,14 +30,15 @@ else:
 ### 3.1.x Cvičení funkce
 * napište funkci `add`, která vezme dva argumenty a vrátí jejich součet
 ```add(4, 6) -> 10```
-* napište funkci `show` která vypíše obsah listu do výstupu, který dostane jako parametr
+* Npište funkci is_bigger, která rozhodne jestli první argument (číslo) je větší než druhý (číslo) -> vrátí True pokud ano, jinak False
+* napište funkci `show` která dostane jako parametr list a vypíše jeho obsah do konzole - list projděte pomocí for cyklu
 ```python
 numbers = [1, 2, 4]
 show(numbers) # -> nic nemusí vracet
 ```
 
 ### 3.1.3 Výpočet součtu
-Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci add, kterou jste si napsali)
+Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci `add`, kterou jste si napsali)
 
 ## Packing parameters
 V pythonu lze napsat funkci, která bude přijímat libovolný počet argumentů. Lze toho dosáhnout pomocí "sbalení" parametrů do listu.
