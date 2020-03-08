@@ -39,6 +39,19 @@ show(numbers) # -> nic nemusí vracet
 ### 3.1.3 Výpočet součtu
 Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci add, kterou jste si napsali)
 
+## Packing parameters
+V pythonu lze napsat funkci, která bude přijímat libovolný počet argumentů. Lze toho dosáhnout pomocí "sbalení" parametrů do listu.
+```python
+def count(*params):
+    return len(params)
+
+count(1, 41, "Kitty", "SH", 0.1, False)     # -> 6
+
+def count2(first, *others):
+    return 1 + len(others)
+
+count2(1, 41, "Kitty", "SH", 0.1, False)     # -> 6
+```
 
 ## Str - split
 Na každý řetězec lze zavolat metodu split, která nám umožňuje rozdělit řetězec na víc částí. Jako parametr se udává oddělovač, který split bude hledat v řetězci a v daném místě provede rozdělení. Návratová hodnota je List obsahující jednotlivé části.
