@@ -81,16 +81,3 @@ Použijte naivní řešení - cyklem projdete pole a v globální promněné bud
 <!-- Nejprve napsat vše do cyklu, potom vylepšit separací kódu do funkce-->
 ### 3.3.1 Kalkulačka podruhé
 Program se zeptá na číslo, operátor, číslo -> ověří že čísla jsou čísla a operátor je známý operátor (pokud operátor neznáme, tak vypíšeme hlášku "neznámý operátor" a zeptáme se na něj znovu) -> ukáže výsledek a znovu se ptá, pokud uživatel vloží nyní jako první operátor a pak číslo, tak kalkulačka spočte `předchozí výsledek, operátor, nové číslo` a ukáže výsledek. Takto lze opakovat do nekonečna. Program se ukončí pokud kdykoliv na vstup uživatel napíše 'q'.
-
-
-### Cvičení - TODO aplikace
-Napište konzolovou aplikaci, která si bude udržovat v poli text úkolu a jeho stav (hotovo/vytvořeno). Uživateli nabídne jednoduché menu:
-```
-Menu: (pro výběr stiskněte danou klávesu)
-Zobrazi vše - 'a'
-Zobrazit hotové - 'd'
-Zobrazit nové - 'n'
-Přidat úkol - 'c'
-Ukončit - 'q'
-```
-
