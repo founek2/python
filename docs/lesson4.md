@@ -57,7 +57,7 @@ type(point1)    # -> <class '__main__.Dog'>
 
 ## Exceptions
 V každém programovacím jazyku je potřeba nějakým způsobem signalizovat chybový stav. Např. pokud se snažíme dělit nulou, předáme do funkce jiný počet parametrů než je povoleno atd... Nejpoužívánější jsou dva přístupy - první pomocí Exceptions (vyjímek) které využívá python a druhá možnost je v návratové hodnotě funkce vždy s výslednou hodnotou předat chybový stav. Malá ukázka:
-```Python
+```python
 # Exceptions
 try:
     number = int('Kitty')
@@ -79,7 +79,7 @@ Oba přístupy mají svoje výhody a nevýhody. Python se rozhodl pro variantu s
 > seznam [built-in exceptions](https://docs.python.org/3.8/library/exceptions.html)
 ### Jak to funguje?
 Funkce u které se předpokládá, že může nastat chyba (např. funkce int() - chyba např. při volání `int('21at')`  - neobsahuje pouze čísla) a potřebuje o tom informovat toho kdo jí volá, tak může vyhodit vyjímku. Jak to udělat? Na to existuje klíčové slovo `raise` - tímto Python zařídí že v daném místě se přeruší vykonávání kódu a vyhodí vyjímku. Zpracování kódu pokračuje v místě kde je odchycení vyjímku - blok `expect`, pokud daná funkce nebyla v bloku `try` a vyhodí vyjímku, tak python ukončí celá skript. Ukázka:
-```Python
+```python
 def fn_only_str(param):
     if type(param) == str:
         return True
@@ -97,15 +97,15 @@ except Exception:
 ```
 
 Na ukázce víše jsou vidět nová klíčová slova `try` a `except`. Slovo `try` uvozuje začátek bloku kde se předpokládá, že nějaká chyba může nastat. A jak poznáme že může nastat? U vlastních funkcí víme jestli mohou vyhodit nějakou exceptions a u vestavěných funkcí se musíme podívat do dokumentace. Dále slovo `except` uvozuje blok kódu, který se vykonná v případě, že v `try` nastane nějaká vyjímka - všimněte si, že za slovem `except` následuje ještě slovo `Exception` - to označuje pro jaký druh vyjímky se blok má provést. Vyjímek máme spoustu druhé a všechny jsou potomkem `Exception`. Jestli nevíte co je potomek nevadí, pro nás to znamená, že pokud chceme except využít pro libovolnou vyjímku, tak stačí dát Exception. Ukázka pro různé druhy vyjímek:
-```Python
-    try:
-        number = int(input('Zadej číslo'))
-    except ValueError:
-        print('Passed bad value')
-    except IOError:
-        print("problem with file")  # could happend if in try was operation with file for example
-    except Exception:   # Other exceptions
-        print("Something bad happend")
+```python
+try:
+    number = int(input('Zadej číslo'))
+except ValueError:
+    print('Passed bad value')
+except IOError:
+    print("problem with file")  # could happend if in try was operation with file for example
+except Exception:   # Other exceptions
+    print("Something bad happend")
 ```
 
 ## import os
