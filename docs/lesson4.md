@@ -15,18 +15,17 @@ Ukončit - 'q'
 
 ## Cesta k TODO aplikaci
 Nyní již známe základní "stavební" prvky a je na čase si napsat složitější aplikaci. Zde je zadáno několik cvičení, které zdánlivě spolu nesouvisí, ale jsou sestavená tak, aby jste si osvojili a vyzkoušeli si vše co budete potřebovat pro závěrečnou aplikaci. Výsledkem bude TODO aplikace - pro ty co nevědí, tak se jedná o aplikaci, do které si poznamenáte úkol (co chcete udělat) a následně vidíte přehled všech úkolů a jejich stav - jestli jsou hotové nebo ne. Tedy aplikace se bude skládat z těchto funkcionalit:
-```
+
 Vytvoření nového úkolu
-Zobrazení všech úkolů
-Zobrazení hotových
-Zobrazení nehotových
-Změna stavu úkolu na hotový/nehotový
-```
+* Zobrazení všech úkolů
+* Zobrazení hotových
+* Zobrazení nehotových
+* Změna stavu úkolu na hotový/nehotový
+
 Později rozšíříme o tyto:
-```
-Při vypnutí uložení úkolů do souboru
-Po zapnutí načtení úkolů ze souboru
-```
+* Při vypnutí uložení úkolů do souboru
+* Po zapnutí načtení úkolů ze souboru
+
 
 ## Změna významu cvičení
 Z důvodů samostudia měním styl cvičení a to tak, že i jednotlivá cvičení se budou odevzdávat - aby jste dostali zpětnou vazbu. Chci upozornit, že odevzdávané úkoly a nyní i cvičení se vždy snažím okomentovat jak nejlépe dovedu. Neberto to prosím jako nějakou hroznou kritiku, ale jako prostor pro zlepšení. Komentoval jsem i úkoly, které byly napsané naprosto korektně (napsal bych je stejně), ale i přesto jsem se snažil naznačit prostor pro možné zlepšení.
