@@ -1,7 +1,3 @@
-# VÝUKA POZASTAVENA do 22. března
-* prosím projděte si materiály pro 3. lekci a vypracujte si cvičení
-* případné konzultace budeme řešit přes email/classroom
-
 # 1. Lekce
 > Stolní pc:
 >   * user: Guest
