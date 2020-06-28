@@ -27,9 +27,6 @@ Později rozšíříme o tyto:
 * Po zapnutí načtení úkolů ze souboru
 
 
-## Změna významu cvičení
-Z důvodů samostudia měním styl cvičení a to tak, že i jednotlivá cvičení se budou odevzdávat - aby jste dostali zpětnou vazbu. Chci upozornit, že odevzdávané úkoly a nyní i cvičení se vždy snažím okomentovat jak nejlépe dovedu. Neberto to prosím jako nějakou hroznou kritiku, ale jako prostor pro zlepšení. Komentoval jsem i úkoly, které byly napsané naprosto korektně (napsal bych je stejně), ale i přesto jsem se snažil naznačit prostor pro možné zlepšení. Prosím o odezvdávání na [git](#Odevzdávání-na-GIT)
-
 ## Namedtuple
 Již jsme si představily datový typ [tuple](#tuple). Namedtuple je vylepšená varianta. Pokud u klasického tuplu chceme přistupovat na určitou pozici, tak musíme využít indexaci a to není moc přehledné. Např. `pozice[3]` nám na první pohled nic moc neřekne, ale pokud by jsme mohly toto `pozice.osaY`, tak by to bylo mnohem čitelnější. A to je přesně to, co nám namedTuple nabízí. Ve své podstatě se chová stále stejně jako obyčejný tuple, ale krom adresace přes index nám přidává možnost přístupu přes názvy viz ukázka:
 ```python

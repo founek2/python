@@ -3,6 +3,8 @@
 ### 2.2.1 Kalkulačka - zjednodušená II
 Využijte již naprogramovanou zjednodušenou kalkulačku, ale místo použití 3 promněných pro každou hodnotu, která se načítá od uživatele využijte list a cyklus. Stejně tak pro hlášky, které vypisujete uživateli.
 
+[Referenční_řešení](_examples/calc_easy2)
+
 ## Funkce pokračování
 V první lekci jsme si ukázali jak funkci zavolat, nyní si ukáže jak si můžeme vytvořit svoji vlastní. Používá se pro to klíčové slovo `def`, za kterým následuje název funkce a v závorkách názvy promněných do která se nám vloží parametry, pokud naší funkci někdo zavolá a nějaká parametry zadá.
 ```python
@@ -81,3 +83,5 @@ Použijte naivní řešení - cyklem projdete pole a v globální promněné bud
 <!-- Nejprve napsat vše do cyklu, potom vylepšit separací kódu do funkce-->
 ### 3.3.1 Kalkulačka podruhé
 Program se zeptá na číslo, operátor, číslo -> ověří že čísla jsou čísla a operátor je známý operátor (pokud operátor neznáme, tak vypíšeme hlášku "neznámý operátor" a zeptáme se na něj znovu) -> ukáže výsledek a znovu se ptá, pokud uživatel vloží nyní jako první operátor a pak číslo, tak kalkulačka spočte `předchozí výsledek, operátor, nové číslo` a ukáže výsledek. Takto lze opakovat do nekonečna. Program se ukončí pokud kdykoliv na vstup uživatel napíše 'q'.
+
+[Referenční_řešení](_examples/calc_hard)
