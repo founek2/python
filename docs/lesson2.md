@@ -71,7 +71,7 @@ for prvek in ntice:
 
 
 ### 2.1.x Cvičení na pole
-* Vytvořte promněnou s prázdnám polem a vložte do něj prvky 0 až 99 (nedělejte to manuálně, ale použijte cyklus). Následně vypište každý třetí prvek.
+* Vytvořte promněnou s prázdnám polem a vložte do něj prvky 100 až 199 (nedělejte to manuálně, ale použijte cyklus). Následně vypište každý třetí prvek z daného pole.
 * Vytvořte list s alespoň 10 čísly a následně spočítejte průměr z hodnot
 
 
