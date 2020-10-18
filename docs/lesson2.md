@@ -33,8 +33,8 @@ Víceřádkový dokumentační
 
 ## Fce Range - parametry
 Funkci range lze zavolat s různým počtem parametrů. Pokud dostane pouze jeden argument `n`, tak vrátí posloupnost začínající od 0 s n prvky -> tedy 0,1,2,...,n-1  
-Pokud předáme parametry 2 např. `range(2, 10)`, tak návratová hodnotu bude posloupnost začínající číslem 2 s 10 prvky -> tedy 2,3,4,...,9  
-Další možnost je předat parametry 3 např. `range(1, 10, 2)`. První parametr opět udává počátek posloupnosti a druhý počet prvků, třetí parametr určuje krok. Tedy v našem případě výsledná posloupnost bude 1,3,5,7,9
+Pokud předáme parametry 2 např. `range(2, 10)`, tak návratová hodnotu bude posloupnost začínající číslem 2 a končí číslem 9 (parametr je exkluzivní) -> tedy 2,3,4,...,9  
+Další možnost je předat parametry 3 např. `range(1, 10, 2)`. První parametr opět udává počátek posloupnosti a druhý exkluzivní maximální hodnotu, třetí parametr určuje krok. Tedy v našem případě výsledná posloupnost bude 1,3,5,7,9
 
 ## List
 Dalším důležitým datovým typem je List (v jiných jazycích známí jako pole). V tomto typu lze uložit libovolné množství dat, která spolu často nějak souvisí ale nemusí, a následně na ně přistupovat pomocí indexů. S tímto přístupem jsme se již setkali při přistupování na jednotlivá písmena v řetězci. Výhoda je že pro tisíc hodnot nemusíme mít tisíc promněných ale pouze jednu typu List a jednotlivé hodnoty jsou přistupné pomocí indexů. Příklad použití:
