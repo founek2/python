@@ -12,7 +12,7 @@ for side_number in range(4):
     turtle.left(angle)          # rotation
 
 turtle.exitonclick()            # exit program on mouse click
-turtle.mainloop()               # run animation and wait
+turtle.mainloop()               # keep showing window
 ```
 
 ## Základní funkce
