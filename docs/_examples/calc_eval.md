@@ -1,4 +1,4 @@
-## Kalkulačka 2
+## Kalkulačka nebezpečná
 
 Nebezpečný vstup pro otevření terminálu na OS Linux s Gnome. Prví řádek vložte jako první číslo, druhý jako operátor a třetí jako druhé číslo:
 

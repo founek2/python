@@ -107,4 +107,4 @@ Program se zeptá na číslo, operátor, číslo -> ověří že čísla jsou č
 
 [Referenční](_examples/calc_normal)
 
-[Referenční s nebezpečnou funkcí eval](_examples/calc_normal)
+[Referenční s nebezpečnou funkcí eval](_examples/calc_eval)
