@@ -1,5 +1,7 @@
-texts = ["Zadejte první číslo: ", "Zadejte matematický operátor: ", "Zadejte druhé číslo: "]
+texts = ["Zadejte první číslo: ",
+         "Zadejte matematický operátor: ", "Zadejte druhé číslo: "]
 allowed_operators = ['+', '-', '/', '*', '**', '%']
+
 
 def calculate(value_list):
     num1, operator, num2 = value_list
@@ -36,7 +38,6 @@ while True:
         else:
             values.append(float(value))
 
-
         # pokud je zadán operátor jako první, tak
         # kontrola jestli existuje minulý výsledek
         # pokud ano, tak ho přidat jako první číslo
@@ -50,7 +51,7 @@ while True:
                 values.insert(0, last_result)
                 i += 1      # v poli již máme operátor a insert přídal první číslo na pozici 0 -> již potřebujeme pouze jednu hodnotu načíst
         i += 1
-    
+
     print(values)
 
     result = calculate(values)
