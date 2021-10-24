@@ -1,23 +1,84 @@
-import turtle
-
-# side_length = 100
-# angle = 90
-# for side_number in range(4):
-#     turtle.forward(side_length)
-#     turtle.left(angle)
-
-# turtle.circle(50)
-# print(turtle.position())
+# funkce operace
+def scitani(c1, c2):
+    r = c1 + c2
+    print("result je " + str(r))
 
 
-## Star with odd n
-n = 5
-d = 200
-for i in range(n):
-    angle = 180.0 - 180.0 / n
-    turtle.forward(d)
-    # turtle.forward(d)
-    turtle.left(angle)
+def odecitani(c1, c2):
+    r = c1 - c2
+    print("result je " + str(r))
 
-turtle.exitonclick()
-turtle.mainloop()
+
+def nasobeni(c1, c2):
+    r = c1 * c2
+    print("result je " + str(r))
+
+
+def deleni(c1, c2):
+    r = c1 / c2
+    print("result je " + str(r))
+
+# funkce vstup cisla
+
+
+def vstupCisla():
+    num = int(input("zadej cislo: "))
+    print("zadal jsi cislo: " + str(num))
+    return num
+
+
+""""
+# kontrola operace
+def kontrolaOperace(oper):
+        if oper == '+' or oper == '-' or oper == '*' or oper == '/':
+            #vystup operace
+            print("zadal jsi operace: " + oper)
+        else:
+            # vystup chyby
+            oper = input("chyba pravopisu! zvol operace znovu: ")
+"""
+
+
+# spusk programu
+print("vitam ti v kalkulacce!")
+
+# start or q
+start = input("zadej start aby spustit kalkulacku nebo q aby program skoncil ")
+
+# prvni cislo
+num1 = vstupCisla()
+
+# operace
+print("muzes zvolit operace: +, -, *, /")
+
+# zadani operace
+operation = input("napis operace, kterou chces pouzit: ")
+
+# kontrola operace
+
+if operation == "+":
+    num2 = vstupCisla()
+    res = num1 + num2
+
+if operation == "-":
+    num2 = vstupCisla()
+    res = num1 - num2
+
+if operation == "*":
+    num2 = vstupCisla()
+    res = num1 * num2
+
+if operation == "/":
+    num2 = vstupCisla()
+    res = num1 / num2
+else:
+    print("chyba zadani operace")
+
+
+# druhe cislo
+#num2 = vstupCisla()
+
+
+# vysledek
+print("vysledek je")
+print(res)
