@@ -6,7 +6,9 @@
 
 [Lekce 3.](lesson3.md ':include')
 
-[Lekce 4.](lesson4.md ':include')
+[Lekce 4. ](lesson4.md ':include')
+
+[Lekce 5.](lesson5.md ':include')
 
 [Želva](turtle.md ':include')
 
