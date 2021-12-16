@@ -4,6 +4,7 @@ allowed_operators = ['+', '-', '/', '*', '**', '%']
 
 
 def calculate(value_list):
+    #[ 1, "+", 1]
     num1, operator, num2 = value_list
 
     if operator == '+':
@@ -18,13 +19,19 @@ def calculate(value_list):
         return num1 / num2
     elif operator == '%':
         return num1 % num2
+    
+    print("dasd")
 
+input("Zadej mi hodnotu: ") # return value_from_user
+print(calculate([1, "+", 1])) # 2
+print(len([1,2]))
 
 last_result = None
 while True:
 
-    values = []
+    values = []  # [3, "+", 3]
     i = 0
+    # for i in range(3):
     while i < 3:
         value = input("Zadej hodnotu: ")
 
@@ -34,9 +41,9 @@ while True:
         # pokud je zadán operátor, tak zachovat řetězec,
         # jinak převést na číslo
         if value in allowed_operators:
-            values.append(value)
+            values.append(value)  # [+]
         else:
-            values.append(float(value))
+            values.append(float(value))  # [3.3]
 
         # pokud je zadán operátor jako první, tak
         # kontrola jestli existuje minulý výsledek

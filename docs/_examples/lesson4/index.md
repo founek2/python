@@ -2,16 +2,16 @@
 
 ## Hledání maxima
 
-[Referenční řešení max](max.py ':include :type=code python')
+[Referenční řešení max](../../_lessons/lesson4/max.py ':include :type=code python')
 
 ## Rozhodnutí primárního číslo
 
-[Referenční řešení prime](prime.py ':include :type=code python')
+[Referenční řešení prime](../../_lessons/lesson4/prime.py ':include :type=code python')
 
 ## Otočení řetězce
 
-[Referenční řešení reverse](reverse.py ':include :type=code python')
+[Referenční řešení reverse](../../_lessons/lesson4/reverse.py ':include :type=code python')
 
 ## Vrácení unikátního listu
 
-[Referenční řešení uniq](uniq.py ':include :type=code python')
+[Referenční řešení uniq](../../_lessons/lesson4/uniq.py ':include :type=code python')
