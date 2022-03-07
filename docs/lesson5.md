@@ -1,214 +1,111 @@
-# Samostudium
+# 5. Lekce
 
-<!-- 
-### Cvičení - TODO aplikace
-Napište konzolovou aplikaci, která si bude udržovat v poli text úkolu a jeho stav (hotovo/vytvořeno). Uživateli nabídne jednoduché menu:
-```
-Menu: (pro výběr stiskněte danou klávesu)
-Zobrazi vše - 'a'
-Zobrazit hotové - 'd'
-Zobrazit nové - 'n'
-Přidat úkol - 'c'
-Ukončit - 'q'
-``` 
--->
+## Procvičování funkcí
 
-## Cesta k TODO aplikaci
-Nyní již známe základní "stavební" prvky a je na čase si napsat složitější aplikaci. Zde je zadáno několik cvičení, které zdánlivě spolu nesouvisí, ale jsou sestavená tak, aby jste si osvojili a vyzkoušeli si vše co budete potřebovat pro závěrečnou aplikaci. Výsledkem bude TODO aplikace - pro ty co nevědí, tak se jedná o aplikaci, do které si poznamenáte úkol (co chcete udělat) a následně vidíte přehled všech úkolů a jejich stav - jestli jsou hotové nebo ne. Tedy aplikace se bude skládat z těchto funkcionalit:
+### Cvičení
 
-Vytvoření nového úkolu
-* Zobrazení všech úkolů
-* Zobrazení hotových
-* Zobrazení nehotových
-* Změna stavu úkolu na hotový/nehotový
+1. Write a Python function to find the Max of three numbers
+2. that reverse a string
+3. that accepts a string and calculate the number of upper case letters and lower case letters.
+4. that takes a list and returns a new list with unique elements of the first list
+5. that takes a number as a parameter and check the number is prime or not.
+6. that checks whether a passed string is palindrome or not
 
-Později rozšíříme o tyto:
-* Při vypnutí uložení úkolů do souboru
-* Po zapnutí načtení úkolů ze souboru
+[Referenční řešení](_examples/lesson4/index)
 
+## Datové struktury 1
 
-## Namedtuple
-Již jsme si představily datový typ [tuple](#tuple). Namedtuple je vylepšená varianta. Pokud u klasického tuplu chceme přistupovat na určitou pozici, tak musíme využít indexaci a to není moc přehledné. Např. `pozice[3]` nám na první pohled nic moc neřekne, ale pokud by jsme mohly toto `pozice.osaY`, tak by to bylo mnohem čitelnější. A to je přesně to, co nám namedTuple nabízí. Ve své podstatě se chová stále stejně jako obyčejný tuple, ale krom adresace přes index nám přidává možnost přístupu přes názvy viz ukázka:
+-   tuple
+-   vektor
+-   matice
+
+### Cvičení
+
+1. sčítání matic
+2. Načíst matici ze vstupu
+    - uživatel zadá velikost: 4x3
+    - následně jednotlivé řádky matice, čísla budou oddělena mezerou
+
+## Datové struktury 2
+
+-   slovník
+
+### Cvičení
+
+1. překlad PSČ na název města
+
+## List listů
+
+U používání listů je potřeba si dát pozor, protože při jejich přiřazení ať už do proměných nebo jiné využití, tak se listy na rozdíl od primitnívních datových typů jako čísli či boolean nepředávají hodnotou, ale referencí (odkazem) - to způsobuje, že když např. předáme list jako parametr funkce, tak pokud funkce modifikuje nějakým způsobem tento list, tak změny se promítnou i doo našeho listu, protože byl předán pouze referencí a tudíž tato reference odkazuje v obou případech na stejná data, která se modifikují. Co to pro nás znamená ukazuje následující ukázka:
+
 ```python
-from collections import namedtuple
+matrix_a = [[1, 2], [3, 4]]
 
-Point = namedtuple('Point', 'x y')
+radek_1 = [1, 2]
+matrix_b = [radek_1, [3, 4]]   # -> [[1, 2], [3, 4]]
 
-point1 = Point(10, 15)
-point1.x    # -> 10
-point1[0]   # -> 10
-point1.y    # -> 15
-point1[1]   # -> 15
+radek_1[0] = 0
+matrix_b    # -> [[0, 2], [3, 4]]
 
-type(point1)    # -> <class '__main__.Point'>
+def sum_matrixes(matrix_1, matrix_2):
+    # potřebuji výstupní matici, který má správný rozměr
+    result = matrix_1
 
+    for i in range(len(matrix1)):
+        for j in range(len(matrix1[0])):
+            result[i][j] = suma(matrix1[i][j], matrix2[i][j])
 
-Dog = namedtuple('Dog', 'legs head color')
+    return result
 
-my_dog = Dog(10, 1, 'red')
-my_dog.color       # -> 'red'
-
-type(point1)    # -> <class '__main__.Dog'>
+# volání vrátí správný výsledek
+sum_matrixes(matrix_a, matrix_b)    # -> [[2, 4], [6, 8]]
+# ale došlo k modifikace vstupního parametr, takové chování není u funkce pro sčítání chtěné!!
+matrix_a    # -> [[2, 4], [6, 8]]
+matrix_b    # -> [[0, 2], [3, 4]]
 ```
 
-## Exceptions
-V každém programovacím jazyku je potřeba nějakým způsobem signalizovat chybový stav. Např. pokud se snažíme dělit nulou, předáme do funkce jiný počet parametrů než je povoleno atd... Nejpoužívánější jsou dva přístupy - první pomocí Exceptions (vyjímek) které využívá python a druhá možnost je v návratové hodnotě funkce vždy s výslednou hodnotou předat chybový stav. Malá ukázka:
+V ukázce vidíme, že operátor přiřazení `=` nekopíruje list, ale pouze předává referenci na daný list. Tedy pokud potřebuji si vytvořit nový list o stejném rozměru, tak musím si nový list vytvořit "ručně":
+
 ```python
-# Exceptions
-try:
-    number = int('Kitty')
+def sum_matrixes(matrix_1, matrix_2):
+    # varianta 1
+    result = []
+    for i in range(len(matrix1)):
+        result.append([])
+        for j in range(len(matrix1[0])):
+            # naplnění nulami
+            result[i].append(0)
 
-except Exception:
-    print('Some error occurred')
+    # Varianta 2 s využitím násobení listů
+    result = []
+    for i in range(len(matrix1)):
+        result.append([0] * len(matrix1[0]))
 
+    # Intuitivně nás asi napadna i tato možnost, ovšem pozor, toto řešení není správné!!
+    # vnitřní list reprezentující řádek se vytvoří jednou a pak se všude vloží jako reference - všechny rádky budou sdílet stejná data -> budou míst totožnou hodnotu při změně libovolného řádku
+    result = [
+            [0] * len(matrix1[0])
+        ] * len(matrix1)
+    # !! Chybné řešení
+    ...
 
-# Předání chyby návratovou hodnotou 
-# pouze ukázka, v Pythonu fce int() takto nefunguje
-try:
-    number, error = int('Kitty')
-
-    if error:
-        print('Some error occurred')
 ```
-Oba přístupy mají svoje výhody a nevýhody. Python se rozhodl pro variantu s Exceptions a té se budeme věnovat i my (druhá metoda jde ve vlastních funkcí používat i v Pythonu, ale konvence je používat všude Exceptions).
 
-> seznam [built-in exceptions](https://docs.python.org/3.8/library/exceptions.html)
-### Jak to funguje?
-Funkce u které se předpokládá, že může nastat chyba (např. funkce int() - chyba např. při volání `int('21at')`  - neobsahuje pouze čísla) a potřebuje o tom informovat toho kdo jí volá, tak může vyhodit vyjímku. Jak to udělat? Na to existuje klíčové slovo `raise` - tímto Python zařídí že v daném místě se přeruší vykonávání kódu a vyhodí vyjímku. Zpracování kódu pokračuje v místě kde je odchycení vyjímku - blok `expect`, pokud daná funkce nebyla v bloku `try` a vyhodí vyjímku, tak python ukončí celá skript. Ukázka:
+## Named parameters
+
+Při volání funkce lze parametri předávat dle pořadí. Python také umožňuje je předávat jako tzv. "pojmenované parametry", kdy specifikuje název proměné/parametru uvedeného v definici při volání, pak `=` a hodnotu kterou má Python danému parametru přidělit. Toto zvyšuje v některých případech čitelnost. Např. v následující ukázce máme funkce se jménem `fce`, což nám moc neprozradí co vlastně dělá. Ale pokud uvidímě její volání s pojmenovanými parametry `fce(delenec=10, delitel=5)`, tak nám to dává tušit, že vy mohla dělit dvě čísla, aniž se podíváme do její definice.
+
 ```python
-def fn_only_str(param):
-    if type(param) == str:
-        return True
-    else:
-        raise Exception('Invalid Parametr')
+def fce(delenec, delitel, text = ""):
+    print(text)
+    return delenec / delitel
 
-try:
-    fn_only_str("Ahoj 23")
-    print('1 was a str')
-    fn_only_str([])     # -> raise Eception -> stop execution -> continue in except
-    print('2 was a str')
-except Exception:
-    print("exception called")   # Python continues here    
-
+fce(10, 5)
+fce(10, 5, "dělím čísla")
+fce(10, delitel=5)
+fce(delenec=10, delitel=5)
+fce(delenec=10, delitel=5, text="Dělím dvě čísla")
+fce(text="Dělím dvě čísla", delitel=5, delenec=10)
 ```
 
-Na ukázce víše jsou vidět nová klíčová slova `try` a `except`. Slovo `try` uvozuje začátek bloku kde se předpokládá, že nějaká chyba může nastat. A jak poznáme že může nastat? U vlastních funkcí víme jestli mohou vyhodit nějakou exceptions a u vestavěných funkcí se musíme podívat do dokumentace. Dále slovo `except` uvozuje blok kódu, který se vykonná v případě, že v `try` nastane nějaká vyjímka - všimněte si, že za slovem `except` následuje ještě slovo `Exception` - to označuje pro jaký druh vyjímky se blok má provést. Vyjímek máme spoustu druhé a všechny jsou potomkem `Exception`. Jestli nevíte co je potomek nevadí, pro nás to znamená, že pokud chceme except využít pro libovolnou vyjímku, tak stačí dát Exception. Ukázka pro různé druhy vyjímek:
-```python
-try:
-    number = int(input('Zadej číslo'))
-except ValueError:
-    print('Passed bad value')
-except IOError:
-    print("problem with file")  # could happend if in try was operation with file for example
-except Exception:   # Other exceptions
-    print("Something bad happend")
-```
-
-## import os
-Modul [os](https://docs.python.org/3/library/os.html) obsahuje nástroje pro práci s operačním systémem - např. pro práci se soubory, terminálem a spoustu dalšího. Nás tu bude zajímat jedna funkce a to `os.system()`, které můžeme předat v argumentu příkaz, který vykoná v terminálu. U konzolových aplikací občas potřebujeme vyčistit výstup terminálu od výpisů a to můžeme právě pomocí této funkce. 
-
->Slovem `import` můžeme načíst další moduly, které rozšiřují funkcionalitu, kterou můžeme využít. Počet built-in funkcí je omezen a občas se hodí i jiné. Např. pro dělení jsme si ukazovali modul [math](https://docs.python.org/3/library/math.html), které obsahuje pokročilejší matematické operace.
-
-Ukázka:
-```python
-import os
-
-os.system('clear')      # OS Linux/Mac
-os.system('cls')        # Windows
-
-import math
-math.sqrt(4)        # 2.0
-```
-Co se stane? Python spustí subshell (podproces) ve kterém zavolá daný příkaz - tedy otevře terminál a tam zadá text "clear" a dá entr.
-
-## Fce Fce Fce
-Zde vás chci upozornit, aby jste se nebáli používat funkce co nejčastěji. Souvislá kód na 200 řádku je sice hezký, 5min po tom co ho napíše se v něm ještě vyznáte, ale za půl hodiny již budete bloudit. Proto je lepší klidně zadefinovat 10 funkcí, každá bude mít 10 řádků, ale výsledek bude mnohem čitelnější, protože názvem funkce do kódu vkládáte jakýsi komentář. Ukázka:
-```python
-# blok bez funkcí
-ab = (abs(point_a[0] - point_b[0]), abs(point_a[1] - point_b[1]))
-ac = (abs(point_a[0] - point_c[0]), abs(point_a[1] - point_c[1]))
-ad = (abs(point_a[0] - point_d[0]), abs(point_a[1] - point_d[1]))
-bc = (abs(point_b[0] - point_c[0]), abs(point_b[1] - point_c[1]))
-bd = (abs(point_b[0] - point_d[0]), abs(point_b[1] - point_d[1]))
-cd = (abs(point_c[0] - point_d[0]), abs(point_c[1] - point_d[1]))
-
-# To stejné s funkcemi
-def calc_distance(a, b):
-    return abs(a[0] - b[0]), abs(a[1] - b[1])
-
-ab = calc_distance(point_a, point_b)
-ac = calc_distance(point_a, point_c)
-ad = calc_distance(point_a, point_d)
-bc = calc_distance(point_b, point_c)
-bd = calc_distance(point_b, point_d)
-cd = calc_distance(point_c, point_d)
-```
-
-### 1.1 Namedtuple
-Nadefinujte namedtuple House - vymyslete mu 5 vlastností, vytvřte si promněnou s daným namedtuple. Vypište si jednotlivé vlastností pomocí indexace a pomocí tečkové notace. Pokuste se pomocí `=` změnit hodnotu nějaké vlastnosti a zamyslete se nad výstupem (okomentujte proč se to stalo).
-
-
-### 1.2.1 Exceptions
-Napište program který bude ošetřovat vstup od uživatele. Potřebujete od něj načíst celé číslo, desetinné číslo, text minimální délky 10, bool hodnotu a matematický operátor (jeden z [+, -, \, =, %]). Vždy po zavolání fce `input` proveďte potřebnou kontrolu a přetypování pomocí [konstruktorů](#Konstruktory-primitivů). Pro kontrolu využijte vyjímky - při pokusu přetypování řetězce od uživatele konstruktory mohou vyhodity při chybě vyjímku... využijte toho
-
-### 1.2.2
-Napište vlastní funkce která bude brát dva parametry - první typu number a druhý typu list. Pokud se typy budou lišit vyhodtě `ValueError`, jinak zjistěte index v listu pro číslo v prvním parametru. Pokud ho najdete -> vraťte, jinak vyhodtě vyjímku `LookupError`. Ve vašem programu zavolejte vaší funkce s různými parametry a ošetřete možnost vyhození vyjímky pomocí try, except - vyzkoušejte si více except pro různé typy vyjímek.
-
-
-### 1.3 os
-Napište program, který vypíše nějaký text a bude čekat dokola na uživatelský vstup - pokud dostane "a" (again), tak text vypíše znovu, pokud dostane "c" (clear), tak vymaže výstup terminálu. Při stisknutí ctrl+c musí program tuto akci odchytit a korektně se ukončit.
-> Program si můžete dle libosti upravit a vylepšit
-
-
-
-## TODO aplikace
-A je to tu. Napište konzolovou aplikaci, která bude mít uživatelské rozhraní - v terminálu zobrazí učivateli menu a uživatel se bude moci v něm pohybovat pomocí zkratek (napíše např. začáteční písmeno). A bude mít tuto [funkčnost](#Cesta-k-TODO-aplikaci) 
-```
-Menu: (pro výběr stiskněte danou klávesu)
-Show all - s
-Show done - d
-Show incomplete - i
-Add task - a
-Change state - c
-Show menu - m
-Quit - q
-```
-
-Ukázka možnéno rozhraní (">" vždy označuje uživatelský vstup):
-```
-Menu: (pro výběr stiskněte danou klávesu)
-Show all - s
-Show done - d
-Show incomplete - i
-Add task - a
-Change state - c
-Show menu - m
-Quit - q
-
->a
-Co? Posekat trávu
-Přidáno
-
->s
-Všechny úkoly:
-Posekat trávu - Incomplete
-
->c
-Select task:
-[0] Posekat trávu - Incomplete
-
-ID done/inc> 0 done
-
->s
-Všechny úkoly:
-Posekat trávu - Done
-
->i
-Nedokončené úkoly:
-
->d
-Hotové úkoly:
-Posekat trávu - Done
-
->q
-```
+Dále si všimněte využití operátoru `=` v definici parametrů. Jedná se o tzv. "optional" neboli nepovinný parametr. Pokud při volání funkce zadáme jeho hodnotu, tak se tato hodnotu nastavení, pokud však hodnotu tohoto parametru při volání nezadáme, tak se jako výchozi využije ta za operátorem `=`.

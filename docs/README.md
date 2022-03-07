@@ -8,9 +8,9 @@
 
 [Lekce 4. ](lesson4.md ":include")
 
-[Lekce 5.](lesson5.md ":include")
+[\_](lesson5.md ":include")
 
-[Želva](turtle.md ":include")
+[\_](lesson6.md ":include")
 
 [Časový rozvrh](timetable.md ":include")
 

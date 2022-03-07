@@ -50,7 +50,7 @@ Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při vo
 
 ## Cvičení
 
-### 1.1.x Čísla
+### 1.1.1 Čísla
 
 -   Sečtěte čísla 1, 5 a 98
 -   Spočítejnte třetí mocninu čísla 11
@@ -66,6 +66,25 @@ Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při vo
 > -   `%` zbytek po dělení 9 % 2 -> 1
 > -   `**` umocní číslo před operátorem na číslo za operátorem 2 \*\* 3 -> 8
 
+### 1.1.2
+
+Ukázka kódu, který kontroluje podle početu gran, zda se může jednat o graf:
+
+```python
+edges = 4
+
+if  edges > 0:
+    is_graph = True
+elif edges == 4:
+    has_four = True
+else:
+    is_graph = False
+```
+
+-   Jakou hodnotu budout mít proměnné `is_graph` a `has_four`?
+-   Jak lze kód úpravit, aby graf mohl mít 0 hran? (pokud má 1 vrchol, tak má 0 hran a jedná se o graf)
+-   pomocí funkce `input` načtěne své jméno do proměnné `name` a následně vypište text "Tvé jméno je Martin a jsi na hodině Pythonu" - místo "Martin" dosaďte obsah proměnné `name` (tedy své jméno)
+
 ## Řetězce
 
 U řetězcu se dá doptat na jednotlivé znaky pomocí pozice. Pozice vždy začíná na 0 a získat n-tý znak se dá takto:
@@ -77,7 +96,6 @@ text[1]     –> "i"
 text[2]     –> "c"
 text[3]     –> "e"
 text[4]     –> " "
-.
 .
 .
 text[9]     –> "y"
@@ -94,13 +112,11 @@ Dále funguje také dotazování na pozice od zadu (záporná adresace). Posledn
 > ## Řetězce formátování
 >
 > Jednotlivé řetězce jsou spojovat pomoci operátoru `+` nebo lze využít moderní přístup tzv. f-strings. Stačí před úvozovky řetězce dát písmeno `f` a v řetezci lze do závorek `{}` napsat promněnou, která si při zpracování nahradí svojí hodnotou.
->  ```python
+>
+> ```python
 > game = 'Lineage II'
 > 'Moje neoblíbenější pc hra je' + ' ' + game # výstup -> "Moje neoblíbenější pc hra je Lineage II"
 > f'Moje neoblíbenější pc hra je {game}' # výstup -> "Moje neoblíbenější pc hra je Lineage II"
->
-> ```
->
 > ```
 
 ### 1.2.4 Řetězce
