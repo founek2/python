@@ -131,7 +131,7 @@ Jmenuji se {vaše jméno} a na Strahově jsem již {počet} let
 
 ```python
 for number in 0,1,2,3,4,5,6:
-    print(number)   # vypíše všechna čísla od 1 do 9
+    print(number)   # vypíše všechna čísla od 0 do 6
 
 for number in range(7):
     if number == 2:
