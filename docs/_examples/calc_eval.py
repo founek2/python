@@ -17,8 +17,6 @@ operators = ["+", "-", "*", "/"]
 konec = "a"
 prev_result = 0
 
-operator = give_me_operator()
-
 while konec != "q":
     operand_a = input("Zadej vstup: ")
 
