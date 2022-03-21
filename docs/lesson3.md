@@ -20,14 +20,14 @@ turtle.mainloop()               # keep showing window
 [dokumentace](https://docs.python.org/3/library/turtle.html)
 
 -   pohyb:
-    -   turtle.`foward`(int)
+    -   turtle.`forward`(int)
     -   turtle.`backward`(int)
     -   turtle.`circle`(int)
 -   otočení:
     -   turtle.`left`(degrees)
     -   turtle.`rigth`(degrees)
 -   pozicování:
-    -   turtle.`position`(int, int)
+    -   turtle.`position`() - získání aktuální pozice např. (440.00,-0.00)
     -   turtle.`setx`(int)
     -   turtle.`sety`(int)
     -   turtle.`goto`(int, int)
