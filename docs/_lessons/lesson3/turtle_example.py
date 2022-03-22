@@ -5,7 +5,7 @@ import turtle
 
 colors = ['orange', 'red', 'pink', 'yellow', 'blue', 'green']
 for x in range(50):
-    turtle.pencolor(colors[x % 6])
+    turtle.pencolor(colors[x % len(colors)])
     turtle.width(x / 5 + 1)
     turtle.forward(x)
     turtle.left(20)
