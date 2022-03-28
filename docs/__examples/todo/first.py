@@ -55,9 +55,7 @@ def show_ids():
 
     for i, task in enumerate(tasks):
         text, state = task
-        print(
-            f'[{i}]',
-             text, "-", to_text(state))
+        print(f'[{i}]', text, "-", to_text(state))
     
 def change_state():
     show_ids()
