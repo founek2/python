@@ -50,18 +50,17 @@ V každém programovacím jazyku je potřeba nějakým způsobem signalizovat ch
 # Exceptions
 try:
     number = int('Kitty')
-
 except Exception:
     print('Some error occurred')
 
 
 # Předání chyby návratovou hodnotou
 # pouze ukázka, v Pythonu fce int() takto nefunguje
-try:
-    number, error = int('Kitty')
 
-    if error:
-        print('Some error occurred')
+number, error = int('Kitty')
+
+if error:
+    print('Some error occurred')
 ```
 
 Oba přístupy mají svoje výhody a nevýhody. Python se rozhodl pro variantu s Exceptions a té se budeme věnovat i my (druhá metoda jde ve vlastních funkcí používat i v Pythonu, ale konvence je používat všude Exceptions).
