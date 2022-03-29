@@ -40,19 +40,23 @@ else:
     print('Unable to kill')
 ```
 
-### 4.1.x Cvičení funkce
+### 4.1.1 Cvičení funkce
 
 -   napište funkci `add`, která vezme dva argumenty a vrátí jejich součet
     `add(4, 6) -> 10`
--   Npište funkci is_bigger, která rozhodne jestli první argument (číslo) je větší než druhý (číslo) -> vrátí True pokud ano, jinak False
+-   Napište funkci `is_bigger`, která rozhodne jestli první argument (číslo) je větší než druhý (číslo) -> vrátí True pokud ano, jinak False
 -   napište funkci `show` která dostane jako parametr list a vypíše jeho obsah do konzole - list projděte pomocí for cyklu
 
 ```python
+print(add(7, 2)) # 9
+
+print(is_bigger(7, 2)) # True
+
 numbers = [1, 2, 4]
 show(numbers) # -> nic nemusí vracet
 ```
 
-### 4.1.3 Výpočet součtu
+### 4.1.2 Výpočet součtu
 
 Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci `add`, kterou jste si napsali)
 
@@ -85,21 +89,28 @@ text.split(' ')     # -> ['Příliš', 'žluťoučký', 'kůň', 'úpěl', 'ďá
 
 Napište tyto 3 funkce:
 
--   `inc` - parametr dostane list čísel a její úkol je přičíst ke každému číslu 1 a list vrátit
+-   `incList` - parametr dostane list čísel a její úkol je přičíst ke každému číslu 1 a list vrátit
 -   `maxList` - parametr dostane list čísel a vrátí maximum
 -   `minList` - parametr dostane list čísel a vrátí minimum
 -   `sumList` - parametr dostane list čísel a vrátí součet
-    Vytvořte skript, který se zeptá uživatele na čísla oddělená čárkou. Načte vstup jako string, potom pomocí metody `split` převede na list a následně vypíše zajímavé statistiky v tomto formátu:
 
-```text
-min: {minimální prvek}
-max: {maximální prvek}
-sum: {součet}
-inc: {list s hodnotami zvětšenými o 1}
-orig: {list s původními hodnotami}
+> Můžete použít naivní řešení - cyklem projdete pole a v globální promněné budete mít minimum (analogicky max), které porovnánte se všemi prvky
+
+```python
+incList([10,3,1])   # [11, 4, 2]
+maxList([10,3,1])   # 10
+minList([10,3,1])   # 1
+sumList([10,3,1])   # 14
 ```
 
-Použijte naivní řešení - cyklem projdete pole a v globální promněné budete mít minimum (analogicky max), které porovnánte se všemi prvky
+-   Vytvořte skript, který se zeptá uživatele na čísla oddělená čárkou. Načte vstup jako string, potom pomocí metody `split` převede na list a následně vypíše zajímavé statistiky v tomto formátu:
+
+```text
+inc: {seznam zadaných hodnot zvýšený o jedna}
+max: {max. ze zadaných hodnot}
+min: {min. ze zadaných hodnot}
+sum: {součet hodnot}
+```
 
 <!-- Nejprve napsat vše do cyklu, potom vylepšit separací kódu do funkce-->
 
