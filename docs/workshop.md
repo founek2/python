@@ -29,3 +29,6 @@ print("response obj:",r)
 time.sleep(4)
 r = send_action(action2)
 ```
+
+> Pokud po spuštění dostáváte chybu `ModuleNotFoundError: No module named 'requests'`, tak nejprve je potřeba modul nainstalovat spuštěním příkazu:
+> `pip install requests`
