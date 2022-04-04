@@ -36,7 +36,7 @@ while True:
     if vstup == "q":
         break
 
-    if vstup in operator_list:
+    if vstup in ["+","-","/", "*"]:
         operator = vstup
         # TODO nekontroluje se, zda bylo zadáno číslo
         operand_2 = nacteni_cisla()
