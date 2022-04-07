@@ -1,29 +1,30 @@
 import requests
 import time
 
+api_key = "qUOm0nOReG0fjos1WfGUUpJuucktj9"
 
-token = "n2z7NYrlDaGBQ832nNt9H4yWoBWZv5"
+off = f"https://iotdomu.cz/api/device/624aad2bff79ba00130591e2/thing/segment0?property=power&value=false"
+on = f"https://iotdomu.cz/api/device/624aad2bff79ba00130591e2/thing/segment0?property=power&value=true"
 
-off = f"https://iotdomu.cz/api/device/61953025b24812001397e845/thing/led?property=power&value=false&api_key={token}"
-on = f"https://iotdomu.cz/api/device/61953025b24812001397e845/thing/led?property=power&value=true&api_key={token}"
-
-blue = "f5cf65"
-green = "fffc00"
-
-
-def change_color(hex_color: str):
-    requests.post(
-        f"https://iotdomu.cz/api/device/61953025b24812001397e845/thing/led?property=color&value=%23{hex_color}&api_key={token}")
+blue = "63,81,181"
+green = "76,175,80"
 
 
-r = requests.post(off)
-print(r.status_code)
-print(r.headers)
-print(r.text)
-print(r)
+def send_action(action: str):
+    return requests.post(
+        f"{action}&api_key={api_key}")
+
+def change_color(color: str):
+    action = f"https://iotdomu.cz/api/device/624aad2bff79ba00130591e2/thing/segment0?property=color&value={color}"
+
+    return send_action(action)
+
+r = send_action(on)
+print("status code: ",r.status_code)
+print("response obj:",r)
 
 time.sleep(4)
-r = requests.post(on)
+r = send_action(off)
 time.sleep(4)
 
 change_color(blue)
