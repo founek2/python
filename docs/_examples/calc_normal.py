@@ -11,32 +11,42 @@ def is_float(str):
     except ValueError:
         return False
 
+# proměnná  reprezentující první číslo
+operand_1 = 0
+
+# proměnná reprezentující operátor
+operator = ""
+
+# proměnná  reprezentující druhé číslo
+operand_2 = 0
 
 while True:
     vstup = input("Zadejte vstup: ")
 
     while not (vstup in operator_list or is_float(vstup)):
         print("Nezadali jste žádný podporovaný oparátor nebo číslo")
-        vstup = input(
-            "Zadejte vstup: ")
+        vstup = input("Zadejte vstup: ")
 
     if vstup in operator_list:
+        # první zadal uživatel operátor -> nastavím si operátor, operand_1 již obsahuje předchozí vásledek
         operator = vstup
-        # TODO nekontroluje se, zda bylo zadáno číslo
+        if operator == "q":
+            break
+
+        # načtu druhé číslo
         operand_2 = float(input("Zadejte číslo: "))
     else:
+        # první zadal uživatel číslo -> načtu operátor, číslo
         operand_1 = float(vstup)
         operator = input(
             "Zadejte matematický operátor, Kalkulačka umožňuje +,-,*,/ : ")
         while operator not in operator_list:
             operator = input(
                 "Nezadali jste žádný podporovaný oparátor, zadejte ho znovu: ")
+        if operator == "q":
+            break
 
-        # TODO tady se číslo kontroluje
-        operand_2 = input("Zadejte číslo: ")
-        while not is_float(operand_2):
-            operand_2 = input("Zadejte číslo: ")
-        operand_2 = float(operand_2)
+        operand_2 = float(input("Zadejte číslo: "))
 
     if operator == "+":
         vysledek = operand_1 + operand_2
@@ -47,8 +57,9 @@ while True:
     elif operator == "/":
         vysledek = operand_1 / operand_2
 
-    operand_1 = vysledek
     print(f"Výsledek je: {vysledek}")
 
-# TODO program nikdy nedojde sem na konec - nelze ukončit pomocí "q"
+    # nastavím operand_1 na aktuální výsledek -> příprava pro další iteraci
+    operand_1 = vysledek
+
 print("Program byl ukončen")
