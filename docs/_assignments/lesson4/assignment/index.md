@@ -5,7 +5,7 @@ Pro bonusovou úlohu máte přiložen archiv bonus_tests.zip. Po jeho rozbalení
 2. Napište funkci, která na základě 4 zadaných bodů rozhodne, zda-li tyto 4 body tvoří obdélník, či nikoliv. Bod je tvořen listem o dvou prvcích: [souřadnice X, souřadnice Y]. Čtverec je speciální případ obdélníku - tedy ten považujte taky za obdélník. Zde by se mohlo hodit porovnávání floatů. Porovnání floatů se dělá takto: místo a == b píšeme abs(a - b) < 1e-16. Takto víme, že prvních 16 desetinných míst nám sedí co je dál nás nezajímá (kvůli binární reprezentaci můžeš nastat drobná nepřesnost, proto se kontroluje pouze prvních N míst), tedy rozdíl může být menší. Kdo si pamatuje úplný prd z geometrie stejně jako já - nebojte se najít si, jak se zjišťuje ze 4 bodů, jestli se jedná o obdélník.
 3. Napište 2 funkce:
 
--   první is_bigger, která přijímá jeden parametr list a kontroluje jestli se jedná o klesající posloupnost tj. první prvek v listu musí být větší než druhý, druhý větší než třetí, třetí než čtvrtý atd... Návratová hodnota je True/False
+-   první is_descending, která přijímá jeden parametr list a kontroluje jestli se jedná o klesající posloupnost tj. první prvek v listu musí být větší než druhý, druhý větší než třetí, třetí než čtvrtý atd... Návratová hodnota je True/False
 -   add_and_increase - funkce přijímá dva parametry. První parametr dostane hodnotu, kterou má přidat do globálního listu "values". Druhý parametr je hodnota o kterou má zvýšit všechny čísla v listu, tedy druhý parametr přičíst ke každému prvku v listu a daný list vrátí jako návratovou hodnotu
 
 Materiál na funkce: https://python.iotplatforma.cloud/#/?id=funkce-pokračování

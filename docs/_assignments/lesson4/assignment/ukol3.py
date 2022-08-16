@@ -2,13 +2,12 @@ def is_descending():
     ...
 
 
-assert is_descending(3, 4) == False
-assert is_descending(5, 5) == False
-assert is_descending(10, 1) == True
-assert is_descending(10, 8, 7, 6, 1, -10, -20) == True
-assert is_descending(10, 8, 7, 6,6, 1, -10, -20) == False
-assert is_descending(1) == True
-
+assert is_descending([3, 4]) == False
+assert is_descending([5, 5]) == False
+assert is_descending([10, 1]) == True
+assert is_descending([10, 8, 7, 6, 1, -10, -20]) == True
+assert is_descending([10, 8, 7, 6, 6, 1, -10, -20]) == False
+assert is_descending([1]) == True
 
 
 values = []
