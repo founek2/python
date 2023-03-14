@@ -2,11 +2,11 @@ from typing import NamedTuple
 from collections import namedtuple
 
 
-def namedtuple(name, fields):
-    def fn():
-        pass
+# def namedtuple(name, fields):
+#     def fn():
+#         pass
 
-    return fn
+#     return fn
 
 
 store = []

@@ -53,8 +53,8 @@ Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při vo
 ### 1.1.1 Čísla
 
 -   Sečtěte čísla 1, 5 a 98
--   Spočítejnte třetí mocninu čísla 11
--   Spočítejnte kolikrát se vejde číslo 7 do 51
+-   Spočtěte třetí mocninu čísla 11
+-   Spočtěte kolikrát se vejde číslo 7 do 51
 -   Zjistěte zbytek po dělení 15 / 4 (nápověda: výsledek je celočíselný 0 <= x < 4)
 
 > CheatSheet pro matematické operátory:
@@ -68,7 +68,7 @@ Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při vo
 
 ### 1.1.2
 
-Ukázka kódu, který kontroluje podle početu gran, zda se může jednat o graf:
+Ukázka kódu, který kontroluje podle počtu uzlů grafu, zda se může jednat o graf:
 
 ```python
 edges = 4
@@ -105,7 +105,7 @@ Dále funguje také dotazování na pozice od zadu (záporná adresace). Posledn
 
 ### 1.2.{1-3} Řetězce
 
--   Vypište počet znaků ve vašem jměné. Pro načtení jména použijte funkci `input()`
+-   Vypište počet znaků ve vašem jméně. Pro načtení jména použijte funkci `input()`
 -   vypište 3. znak z vašeho jména
 -   vypište poslední znak z vašeho jména
 

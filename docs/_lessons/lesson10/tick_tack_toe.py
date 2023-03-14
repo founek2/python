@@ -1,4 +1,4 @@
-shape = (2, 2)
+shape = (9, 9)
 
 plane = []  #
 for i in range(shape[0]):
