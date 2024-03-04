@@ -23,7 +23,7 @@ Spustí se prostředí a nyní lze přímo psát python kód, kde po stisknutí 
 -   str - string, textová hodnota `promnena = "nějaká hodnota"`
 -   bool - `promnena = True`
 -   int - `promnena = 123`
--   flaot - `promnena = 0.981`
+-   float - `promnena = 0.981`
 
 ## Podmínky
 
