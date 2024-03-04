@@ -2,28 +2,33 @@
 
 > Stolní pc:
 >
-> -   user: Guest
-> -   password: Akademie19
+> - user: Guest
+> - password: Akademie19
 
 ## Co je python?
 
--   skriptovací programovací jazyk
-    -   výchozí interpret CPython
--   Vznikl 1991
--   často využíván v OS Linux, Data science
--   dobře čitelný - narozdíl od Javy C++ a jiných
+- skriptovací programovací jazyk
+  - výchozí interpret CPython
+- Vznikl 1991
+- často využíván v OS Linux, Data science
+- dobře čitelný - narozdíl od Javy C++ a jiných
 
 ## Jak ho zapnout?
 
 V terminálu lze jednoduše vyvolat interpret příkazem: `python3`.
 Spustí se prostředí a nyní lze přímo psát python kód, kde po stisknutí klávesy enter se řádek vyhodnotí a zobrazí se jeho výstup (přesněji hodnota daného výrazu).
 
+## Proměnné I
+
+- symbolické jméno pro hodnotu
+- krabička s názvem
+
 ## Primitivní datové typy
 
--   str - string, textová hodnota `promnena = "nějaká hodnota"`
--   bool - `promnena = True`
--   int - `promnena = 123`
--   float - `promnena = 0.981`
+- str - string, textová hodnota `promnena = "nějaká hodnota"`
+- bool - `promnena = True`
+- int - `promnena = 123`
+- float - `promnena = 0.981`
 
 ## Podmínky
 
@@ -43,28 +48,28 @@ Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při vo
 
 ## Základní vestavěné funkce (built-in)
 
--   `print()` - parametry: co chci vypsat
--   `input()` - parametr: text který se zobrazí uživateli
--   `range()` - parametry: (od, do, krok) - do je exkluzivní, tedy range(1, 9) jsou čísla 1-8
--   `len()` - parametr: textový řetězec (vrátí počet jeho znaků)
+- `print()` - parametry: co chci vypsat
+- `input()` - parametr: text který se zobrazí uživateli
+- `range()` - parametry: (od, do, krok) - do je exkluzivní, tedy range(1, 9) jsou čísla 1-8
+- `len()` - parametr: textový řetězec (vrátí počet jeho znaků)
 
 ## Cvičení
 
 ### 1.1.1 Čísla
 
--   Sečtěte čísla 1, 5 a 98
--   Spočtěte třetí mocninu čísla 11
--   Spočtěte kolikrát se vejde číslo 7 do 51
--   Zjistěte zbytek po dělení 15 / 4 (nápověda: výsledek je celočíselný 0 <= x < 4)
+- Sečtěte čísla 1, 5 a 98
+- Spočtěte třetí mocninu čísla 11
+- Spočtěte kolikrát se vejde číslo 7 do 51
+- Zjistěte zbytek po dělení 15 / 4 (nápověda: výsledek je celočíselný 0 <= x < 4)
 
 > CheatSheet pro matematické operátory:
 >
-> -   `+` sčítání: 3 + 10 -> 13
-> -   `-` odčítání: 3 - 10 -> -7
-> -   `/` dělení: 9 / 2 -> 4.5
-> -   `//` celočíselné dělení (odsekne zbytek) 9 // 2 -> 4
-> -   `%` zbytek po dělení 9 % 2 -> 1
-> -   `**` umocní číslo před operátorem na číslo za operátorem 2 \*\* 3 -> 8
+> - `+` sčítání: 3 + 10 -> 13
+> - `-` odčítání: 3 - 10 -> -7
+> - `/` dělení: 9 / 2 -> 4.5
+> - `//` celočíselné dělení (odsekne zbytek) 9 // 2 -> 4
+> - `%` zbytek po dělení 9 % 2 -> 1
+> - `**` umocní číslo před operátorem na číslo za operátorem 2 \*\* 3 -> 8
 
 ### 1.1.2
 
@@ -81,9 +86,9 @@ else:
     is_graph = False
 ```
 
--   Jakou hodnotu budout mít proměnné `is_graph` a `has_four`?
--   Jak lze kód úpravit, aby graf mohl mít 0 hran? (pokud má 1 vrchol, tak má 0 hran a jedná se o graf)
--   pomocí funkce `input` načtěne své jméno do proměnné `name` a následně vypište text "Tvé jméno je Martin a jsi na hodině Pythonu" - místo "Martin" dosaďte obsah proměnné `name` (tedy své jméno)
+- Jakou hodnotu budout mít proměnné `is_graph` a `has_four`?
+- Jak lze kód úpravit, aby graf mohl mít 0 hran? (pokud má 1 vrchol, tak má 0 hran a jedná se o graf)
+- pomocí funkce `input` načtěne své jméno do proměnné `name` a následně vypište text "Tvé jméno je Martin a jsi na hodině Pythonu" - místo "Martin" dosaďte obsah proměnné `name` (tedy své jméno)
 
 ## Řetězce
 
@@ -105,9 +110,9 @@ Dále funguje také dotazování na pozice od zadu (záporná adresace). Posledn
 
 ### 1.2.{1-3} Řetězce
 
--   Vypište počet znaků ve vašem jméně. Pro načtení jména použijte funkci `input()`
--   vypište 3. znak z vašeho jména
--   vypište poslední znak z vašeho jména
+- Vypište počet znaků ve vašem jméně. Pro načtení jména použijte funkci `input()`
+- vypište 3. znak z vašeho jména
+- vypište poslední znak z vašeho jména
 
 > ## Řetězce formátování
 >
@@ -126,43 +131,3 @@ Vypište následující text s použitím pouze jednoho volání funkce print, `
 ```python
 Jmenuji se {vaše jméno} a na Strahově jsem již {počet} let
 ```
-
-## Cykly
-
-```python
-for number in 0,1,2,3,4,5,6:
-    print(number)   # vypíše všechna čísla od 0 do 6
-
-for number in range(7):
-    if number == 2:
-        print(number)   # vypíše poze číslo 2
-
-for number in range(1, 10):
-    if 2 <= number <= 8:    # specialita Pythonu
-        print(number)   # vypíše číslo v rozmezí daném podmínkou
-```
-
-## Odsazení místo závorek
-
-Z výše uvedené ukázky je viděť, že python nepoužívá závorky pro uvození bloku jako C jazyky, ale nad blokem je řádek končící dvojtečkou a pak každý rádek, který je odsazen patří do bloku. Blok končí prvním řádkem, který nemá dané odsazení. Je potřeba si na odsazení dávat pozor, protože rozdíl v jedné mezeře může vyvolat chybu. Bloky lze také libovolně vnořovat.
-
-```python
-for number in range(1, 10):             <- začátek bloku1
-    print("Strahov je životní styl")
-   _
-   └───odsazení
-
-    for number2 in range(1, 10):         <- nový vnořený blok2
-        print(number)                   <- kód vnořeného bloku2
-        print(number2)
-    promnena = number + 1               <- uzavření bloku2 a kód pro blok1
-    print("hodnota", promnena)
-                                        <- uzavření bloku1
-print("konec programu")                 <- globální kód
-```
-
-### 1.3.x Cykly
-
--   Vypište přesně 11x vaše jméno
--   Sečtěte všechna čísla od 0 do 49
--   vypište všechna lichá čísla z intervalu <7, 19>
