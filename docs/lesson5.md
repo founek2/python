@@ -36,7 +36,7 @@
 
 ## List listů
 
-U používání listů je potřeba si dát pozor, protože při jejich přiřazení ať už do proměných nebo jiné využití, tak se listy na rozdíl od primitnívních datových typů jako čísli či boolean nepředávají hodnotou, ale referencí (odkazem) - to způsobuje, že když např. předáme list jako parametr funkce, tak pokud funkce modifikuje nějakým způsobem tento list, tak změny se promítnou i doo našeho listu, protože byl předán pouze referencí a tudíž tato reference odkazuje v obou případech na stejná data, která se modifikují. Co to pro nás znamená ukazuje následující ukázka:
+U používání listů je potřeba si dát pozor, protože při jejich přiřazení, ať už do proměných nebo jiné využití, tak se listy na rozdíl od primitivních datových typů jako čísla či boolean nepředávají hodnotou, ale referencí (odkazem) - to způsobuje, že když např. předáme list jako parametr funkce, tak pokud funkce modifikuje nějakým způsobem tento list, tak změny se promítnou i do našeho listu, protože byl předán pouze referencí a tudíž tato reference odkazuje v obou případech na stejná data, která se modifikují. Co to pro nás znamená ukazuje následující ukázka:
 
 ```python
 matrix_a = [[1, 2], [3, 4]]
@@ -59,12 +59,12 @@ def sum_matrixes(matrix_1, matrix_2):
 
 # volání vrátí správný výsledek
 sum_matrixes(matrix_a, matrix_b)    # -> [[2, 4], [6, 8]]
-# ale došlo k modifikace vstupního parametr, takové chování není u funkce pro sčítání chtěné!!
+# ale došlo k modifikaci vstupního parametru, takové chování není u funkce pro sčítání chtěné!!
 matrix_a    # -> [[2, 4], [6, 8]]
 matrix_b    # -> [[0, 2], [3, 4]]
 ```
 
-V ukázce vidíme, že operátor přiřazení `=` nekopíruje list, ale pouze předává referenci na daný list. Tedy pokud potřebuji si vytvořit nový list o stejném rozměru, tak musím si nový list vytvořit "ručně":
+V ukázce vidíme, že operátor přiřazení `=` nekopíruje list, ale pouze předává referenci na daný list. Tedy pokud si potřebuji vytvořit nový list o stejném rozměru, tak si musím nový list vytvořit "ručně":
 
 ```python
 def sum_matrixes(matrix_1, matrix_2):
@@ -81,8 +81,8 @@ def sum_matrixes(matrix_1, matrix_2):
     for i in range(len(matrix1)):
         result.append([0] * len(matrix1[0]))
 
-    # Intuitivně nás asi napadna i tato možnost, ovšem pozor, toto řešení není správné!!
-    # vnitřní list reprezentující řádek se vytvoří jednou a pak se všude vloží jako reference - všechny rádky budou sdílet stejná data -> budou míst totožnou hodnotu při změně libovolného řádku
+    # Intuitivně nás asi napadne i tato možnost, ovšem pozor, toto řešení není správné!!
+    # vnitřní list reprezentující řádek se vytvoří jednou a pak se všude vloží jako reference - všechny řádky budou sdílet stejná data -> budou míst totožnou hodnotu při změně libovolného řádku
     result = [
             [0] * len(matrix1[0])
         ] * len(matrix1)
@@ -93,7 +93,7 @@ def sum_matrixes(matrix_1, matrix_2):
 
 ## Named parameters
 
-Při volání funkce lze parametri předávat dle pořadí. Python také umožňuje je předávat jako tzv. "pojmenované parametry", kdy specifikuje název proměné/parametru uvedeného v definici při volání, pak `=` a hodnotu kterou má Python danému parametru přidělit. Toto zvyšuje v některých případech čitelnost. Např. v následující ukázce máme funkce se jménem `fce`, což nám moc neprozradí co vlastně dělá. Ale pokud uvidímě její volání s pojmenovanými parametry `fce(delenec=10, delitel=5)`, tak nám to dává tušit, že vy mohla dělit dvě čísla, aniž se podíváme do její definice.
+Při volání funkce lze parametry předávat dle pořadí. Python je také umožňuje předávat jako tzv. "pojmenované parametry", kdy specifikuje název proměnné/parametru uvedeného v definici při volání, pak `=` a hodnotu, kterou má Python danému parametru přidělit. Toto zvyšuje v některých případech čitelnost. Např. v následující ukázce máme funkce se jménem `fce`, což nám moc neprozradí, co vlastně dělá. Ale pokud uvidímě její volání s pojmenovanými parametry `fce(delenec=10, delitel=5)`, tak nám to dává tušit, že by mohla dělit dvě čísla, aniž se podíváme do její definice.
 
 ```python
 def fce(delenec, delitel, text = ""):
@@ -108,4 +108,4 @@ fce(delenec=10, delitel=5, text="Dělím dvě čísla")
 fce(text="Dělím dvě čísla", delitel=5, delenec=10)
 ```
 
-Dále si všimněte využití operátoru `=` v definici parametrů. Jedná se o tzv. "optional" neboli nepovinný parametr. Pokud při volání funkce zadáme jeho hodnotu, tak se tato hodnotu nastavení, pokud však hodnotu tohoto parametru při volání nezadáme, tak se jako výchozi využije ta za operátorem `=`.
+Dále si všimněte využití operátoru `=` v definici parametrů. Jedná se o tzv. "optional" neboli nepovinný parametr. Pokud při volání funkce zadáme jeho hodnotu, tak se tato hodnota nastaví, pokud však hodnotu tohoto parametru při volání nezadáme, tak se jako výchozi využije ta za operátorem `=`.
