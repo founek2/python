@@ -8,13 +8,13 @@ Využijte již naprogramovanou zjednodušenou kalkulačku, ale místo použití 
 
 ## Funkce pokračování
 
-S funkcemi jsme se již několikrát setkali a např. funkci `print()` využíváme s velkou oblibou pro výpisy. Co se ale za tímto jednoduchým zavoláním `print()` vlastně skrývá? V kostce: funkce musí přijmout parametry co ji předáme v závorkách, následně je převést na text, potom nahrát do nějakého bufferu a přimět operační systém, aby vám výsledný text zobrazil na obrazovku. Poměrně složitá věc se skrývá za pěti písmeny, že? A v tom je právě kouzlo funkcí, skrytí něčeho komplikovaného co napíšeme jednou za jednoduché zavolání, které můžeme využívat opakovaně.
+S funkcemi jsme se již několikrát setkali a např. funkci `print()` využíváme s velkou oblibou pro výpisy. Co se ale za tímto jednoduchým zavoláním `print()` vlastně skrývá? V kostce: funkce musí přijmout parametry, co ji předáme v závorkách, následně je převést na text, potom nahrát do nějakého bufferu a přimět operační systém, aby vám výsledný text zobrazil na obrazovku. Poměrně složitá věc se skrývá za pěti písmeny, že? A v tom je právě kouzlo funkcí, skrytí něčeho komplikovaného, co napíšeme jednou za jednoduché zavolání, které můžeme využívat opakovaně.
 
-Funkce můžeme obecně rozdělit na dvě fáze. S jednou z nich jsme se již setkali a tou je volání funkcí - již náme např. `range(2, 10)`. Toto nám umožňuje v kódu využívat funkcionalitu., kterou nám již někdo připravil. Ještě před tím než funkci můžeme zavolat, někdo ale musel nadefinovat jakým způsobem se má funkce chovat / co má dělat. Tomuto kroku se říká definice funkce. Proč vlastně bychom chtěli mít možnost definovat vlastní funkci? Možná jste si již vyzkoušeli, že při programoování složitějších úloh se vám začíná tzv. "duplikovat kód" - některé řádky/úseky se opakují a vyskytují na více místech. To je poměrně pracné napsat i když se zkratkami ctl+C, ctrl+V se mnoho ulehčí. Problém však nastává ve chvíli, když zjistíte že tento úsek co máte na 10 různých místech, tak obsahoval chybu a potřebujete upravit jeho chování. To znamená všechna místa najít a provést úpravu - často se při tomto kroku na nějakou část zapomene a to způsobí "prapodivné" chování celého programu.
+Funkce můžeme obecně rozdělit na dvě fáze. S jednou z nich jsme se již setkali a tou je volání funkcí - již náme např. `range(2, 10)`. Toto nám umožňuje v kódu využívat funkcionalitu, kterou nám již někdo připravil. Ještě před tím než funkci můžeme zavolat, někdo ale musel nadefinovat jakým způsobem se má funkce chovat / co má dělat. Tomuto kroku se říká definice funkce. Proč vlastně bychom chtěli mít možnost definovat vlastní funkci? Možná jste si již vyzkoušeli, že při programování složitějších úloh se vám začíná tzv. "duplikovat kód" - některé řádky/úseky se opakují a vyskytují na více místech. To je poměrně pracné napsat, i když se zkratkami ctl+C, ctrl+V se mnoho ulehčí. Problém však nastává ve chvíli, když zjistíte, že tento úsek co máte na 10 různých místech, tak obsahoval chybu a potřebujete opravit jeho chování. To znamená všechna místa najít a provést úpravu - často se při tomto kroku na nějakou část zapomene a to způsobí "prapodivné" chování celého programu.
 
-A na pomoc s tímto a jinými problémi nám přicházejí právě funkce. Umožnují nám vytvořit definici jejich chování - řádký kódu, které označíme identifikátorem (názvem funkce) a tento kód následně můžeme kdykoliv dle potřeby jinde v kódu zavolat a předat případně nějaké hodnoty (argumenty/parametry) důležité pro běh funkce a následně po vykonání funkce (až se zpracují všechny řádky její definice) získat nějakou výslednou hodnotu (návratovou).
+A na pomoc s tímto a jinými problémy nám přicházejí právě funkce. Umožnují nám vytvořit definici jejich chování - řádký kódu, které označíme identifikátorem (názvem funkce) a tento kód následně můžeme kdykoliv dle potřeby jinde v kódu zavolat a předat případně nějaké hodnoty (argumenty/parametry) důležité pro běh funkce a následně po vykonání funkce (až se zpracují všechny řádky její definice) získat nějakou výslednou hodnotu (návratovou).
 
-Jak si tedy vlastní funkci zadefinovat? Používá se pro to klíčové slovo `def`, za kterým následuje název funkce a v závorkách názvy promněných do která se nám vloží parametry, pokud naší funkci někdo zavolá a nějaká parametry zadá. Předem tedy musíme vědět s kolika parametry chceme naší funkci vytvořit/zadefinovat - toto se odvíjí od toho zda funkci při volání budeme chtít předávat nějaké hodnoty. Pokud napíšeme např. následující definici, tak python dané řádky kódu nijak nevyhodnocuje, pouze si poznamená, že funkci s daným názvem exisuje a vyhodnocuje se až ve chvíli kdy Python narazí na řádek, kde funkci někdo zavolá - tedy až v míste `kill_program(2, 'I don't like it')`.
+Jak si tedy vlastní funkci zadefinovat? Používá se pro to klíčové slovo `def`, za kterým následuje název funkce a v závorkách názvy proměnných, do kterých se nám vloží parametry, pokud naší funkci někdo zavolá a nějaké parametry zadá. Předem tedy musíme vědět s kolika parametry chceme naší funkci vytvořit/zadefinovat - toto se odvíjí od toho, zda funkci při volání budeme chtít předávat nějaké hodnoty. Pokud napíšeme např. následující definici, tak python dané řádky kódu nijak nevyhodnocuje, pouze si poznamená, že funkci s daným názvem exisuje a vyhodnocuje se až ve chvíli, kdy Python narazí na řádek, kde funkci někdo zavolá - tedy až v míste `kill_program(2, 'I don't like it')`.
 
 ```python
 def kill_program(id, reasson):
@@ -44,7 +44,7 @@ else:
 
 -   napište funkci `add`, která vezme dva argumenty a vrátí jejich součet
     `add(4, 6) -> 10`
--   Napište funkci `is_bigger`, která rozhodne jestli první argument (číslo) je větší než druhý (číslo) -> vrátí True pokud ano, jinak False
+-   Napište funkci `is_bigger`, která rozhodne, jestli první argument (číslo) je větší než druhý (číslo) -> vrátí True pokud ano, jinak False
 -   napište funkci `show` která dostane jako parametr list a vypíše jeho obsah do konzole - list projděte pomocí for cyklu
 
 ```python
@@ -94,7 +94,7 @@ Napište tyto 3 funkce:
 -   `minList` - parametr dostane list čísel a vrátí minimum
 -   `sumList` - parametr dostane list čísel a vrátí součet
 
-> Můžete použít naivní řešení - cyklem projdete pole a v globální promněné budete mít minimum (analogicky max), které porovnánte se všemi prvky
+> Můžete použít naivní řešení - cyklem projdete pole a v globální proměnné budete mít minimum (analogicky max), které porovnáte se všemi prvky
 
 ```python
 incList([10,3,1])   # [11, 4, 2]
