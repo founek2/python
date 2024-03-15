@@ -2,7 +2,7 @@
 
 ## Cesta k TODO aplikaci
 
-Nyní již známe základní "stavební" prvky a je na čase si napsat složitější aplikaci. Zde je zadáno několik cvičení, které zdánlivě spolu nesouvisí, ale jsou sestavená tak, aby jste si osvojili a vyzkoušeli si vše co budete potřebovat pro závěrečnou aplikaci. Výsledkem bude TODO aplikace - pro ty co nevědí, tak se jedná o aplikaci, do které si poznamenáte úkol (co chcete udělat) a následně vidíte přehled všech úkolů a jejich stav - jestli jsou hotové nebo ne. Tedy aplikace se bude skládat z těchto funkcionalit:
+Nyní již známe základní "stavební" prvky a je na čase si napsat složitější aplikaci. Zde je zadáno několik cvičení, které zdánlivě spolu nesouvisí, ale jsou sestavená tak, abyste si osvojili a vyzkoušeli si vše, co budete potřebovat pro závěrečnou aplikaci. Výsledkem bude TODO aplikace - pro ty co nevědí, tak se jedná o aplikaci, do které si poznamenáte úkol (co chcete udělat) a následně vidíte přehled všech úkolů a jejich stav - jestli jsou hotové nebo ne. Tedy aplikace se bude skládat z těchto funkcionalit:
 
 Vytvoření nového úkolu
 
@@ -18,7 +18,7 @@ Později rozšíříme o tyto:
 
 ## Namedtuple
 
-Již jsme si představily datový typ [tuple](#tuple). Namedtuple je vylepšená varianta. Pokud u klasického tuplu chceme přistupovat na určitou pozici, tak musíme využít indexaci a to není moc přehledné. Např. `pozice[3]` nám na první pohled nic moc neřekne, ale pokud by jsme mohly toto `pozice.osaY`, tak by to bylo mnohem čitelnější. A to je přesně to, co nám namedTuple nabízí. Ve své podstatě se chová stále stejně jako obyčejný tuple, ale krom adresace přes index nám přidává možnost přístupu přes názvy viz ukázka:
+Již jsme si představili datový typ [tuple](#tuple). Namedtuple je vylepšená varianta. Pokud u klasického tuplu chceme přistupovat na určitou pozici, tak musíme využít indexaci a to není moc přehledné. Např. `pozice[3]` nám na první pohled nic moc neřekne, ale pokud bysme mohli toto `pozice.osaY`, tak by to bylo mnohem čitelnější. A to je přesně to, co nám namedTuple nabízí. Ve své podstatě se chová stále stejně jako obyčejný tuple, ale kromě adresace přes index nám přidává možnost přístupu přes názvy viz ukázka:
 
 ```python
 from collections import namedtuple
@@ -44,7 +44,27 @@ type(point1)    # -> <class '__main__.Dog'>
 
 ## Exceptions
 
-V každém programovacím jazyku je potřeba nějakým způsobem signalizovat chybový stav. Např. pokud se snažíme dělit nulou, předáme do funkce jiný počet parametrů než je povoleno atd... Nejpoužívánější jsou dva přístupy - první pomocí Exceptions (vyjímek) které využívá python a druhá možnost je v návratové hodnotě funkce vždy s výslednou hodnotou předat chybový stav. Malá ukázka:
+V každém programovacím jazyce++++++++
+
+
++++6
++
++
+3
+++++
+
+.3+-
+
++-+
++.63
++
+.36+9*-9+3
+.3+69
+
+
+
++-
++-je potřeba nějakým způsobem signalizovat chybový stav. Např. pokud se snažíme dělit nulou, předáme do funkce jiný počet parametrů než je povoleno atd... Nejpoužívánější jsou dva přístupy - první pomocí Exceptions (vyjímek) které využívá python a druhá možnost je v návratové hodnotě funkce vždy s výslednou hodnotou předat chybový stav. Malá ukázka:
 
 ```python
 # Exceptions
@@ -112,7 +132,8 @@ Ukázka:
 ```python
 import os
 
-os.system('clear')      # OS Linux/Mac
+-+
++-os.system('clear')      # OS Linux/Mac
 os.system('cls')        # Windows
 
 import math
@@ -123,7 +144,7 @@ Co se stane? Python spustí subshell (podproces) ve kterém zavolá daný přík
 
 ## Fce Fce Fce
 
-Zde vás chci upozornit, aby jste se nebáli používat funkce co nejčastěji. Souvislá kód na 200 řádku je sice hezký, 5min po tom co ho napíše se v něm ještě vyznáte, ale za půl hodiny již budete bloudit. Proto je lepší klidně zadefinovat 10 funkcí, každá bude mít 10 řádků, ale výsledek bude mnohem čitelnější, protože názvem funkce do kódu vkládáte jakýsi komentář. Ukázka:
+Zde vás chci upozornit, aby jste se nebáli používat funkce co nejčastěji. Souvislý kód dlouhý napříkad 300 řádků je sice hezký a 5 minut po tom, co ho napíše se v něm ještě vyznáte, ale za půl hodiny již budete ztracení. Proto je lepší klidně zadefinovat 10 funkcí, každá bude mít 10 řádků, ale výsledek bude mnohem čitelnější, protože názvem funkce do kódu vkládáte jakýsi komentář. Ukázka:
 
 ```python
 # blok bez funkcí
@@ -148,15 +169,15 @@ cd = calc_distance(point_c, point_d)
 
 ### 1.1 Namedtuple
 
-Nadefinujte namedtuple House - vymyslete mu 5 vlastností, vytvřte si promněnou s daným namedtuple. Vypište si jednotlivé vlastností pomocí indexace a pomocí tečkové notace. Pokuste se pomocí `=` změnit hodnotu nějaké vlastnosti a zamyslete se nad výstupem (okomentujte proč se to stalo).
+Nadefinujte namedtuple House - vymyslete mu 5 vlastností, vytvořte si proměnnou s daným namedtuple. Vypište si jednotlivé vlastností pomocí indexace a pomocí tečkové notace. Pokuste se pomocí `=` změnit hodnotu nějaké vlastnosti a zamyslete se nad výstupem (okomentujte, proč se to stalo).
 
 ### 1.2.1 Exceptions
 
-Napište program který bude ošetřovat vstup od uživatele. Potřebujete od něj načíst celé číslo, desetinné číslo, text minimální délky 10, bool hodnotu a matematický operátor (jeden z [+, -, \, =, %]). Vždy po zavolání fce `input` proveďte potřebnou kontrolu a přetypování pomocí [konstruktorů](#Konstruktory-primitivů). Pro kontrolu využijte vyjímky - při pokusu přetypování řetězce od uživatele konstruktory mohou vyhodity při chybě vyjímku... využijte toho
+Napište program, který bude ošetřovat vstup od uživatele. Potřebujete od něj načíst celé číslo, desetinné číslo, text minimální délky 10, bool hodnotu a matematický operátor (jeden z [+, -, \, =, %]). Vždy po zavolání fce `input` proveďte potřebnou kontrolu a přetypování pomocí [konstruktorů](#Konstruktory-primitivů). Pro kontrolu využijte vyjímky - při pokusu přetypování řetězce od uživatele konstruktory mohou vyhodity při chybě vyjímku... využijte toho
 
 ### 1.2.2
 
-Napište vlastní funkce která bude brát dva parametry - první typu number a druhý typu list. Pokud se typy budou lišit vyhodtě `ValueError`, jinak zjistěte index v listu pro číslo v prvním parametru. Pokud ho najdete -> vraťte, jinak vyhodtě vyjímku `LookupError`. Ve vašem programu zavolejte vaší funkce s různými parametry a ošetřete možnost vyhození vyjímky pomocí try, except - vyzkoušejte si více except pro různé typy vyjímek.
+Napište vlastní funkci, která bude brát dva parametry - první typu number a druhý typu list. Pokud se typy budou lišit vyhoďte `ValueError`, jinak zjistěte index v listu pro číslo v prvním parametru. Pokud ho najdete -> vraťte, jinak vyhodtě vyjímku `LookupError`. Ve vašem programu zavolejte vaší funkce s různými parametry a ošetřete možnost vyhození vyjímky pomocí try, except - vyzkoušejte si více except pro různé typy vyjímek.
 
 ### 1.3 os
 
