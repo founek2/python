@@ -9,7 +9,7 @@
 
 - skriptovací programovací jazyk
   - výchozí interpret CPython
-- Vznikl 1991
+- Vznikl v roce 1991
 - často využíván v OS Linux, Data science
 - dobře čitelný - narozdíl od Javy C++ a jiných
 
@@ -44,7 +44,7 @@ else:                                # výchozí chování, pokud žádný if ne
 
 ## Volání funkce?
 
-Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při volání za jméno přidáme závorky. Tedy pokud chceme zavolat funkci pro výpis textu s názvem print, tak stačí `print()`. Takto ale funkce neví co má vypsat, takže je potřeba ji předat nějakou hodnotu. To lze udělat tak, že se jednotlivé hodnoty napíší do závorek. Pokud jich je více, tak se oddělují čárkou. Např. výpis slova "#strahov" -`print("#strahov")`. Jednotlivé hodnoty v závorkách se označují jako `parametry`.
+Každá funkce má nějaký název, pomocí kterého na ni lze odkázat. Při volání za jméno přidáme závorky. Tedy pokud chceme zavolat funkci pro výpis textu s názvem print, tak stačí `print()`. Takto ale funkce neví, co má vypsat, takže je potřeba ji předat nějakou hodnotu. To lze udělat tak, že se jednotlivé hodnoty napíší do závorek. Pokud jich je více, tak se oddělují čárkou. Např. výpis slova "#strahov" -`print("#strahov")`. Jednotlivé hodnoty v závorkách se označují jako `parametry`.
 
 ## Základní vestavěné funkce (built-in)
 
@@ -86,9 +86,9 @@ else:
     is_graph = False
 ```
 
-- Jakou hodnotu budout mít proměnné `is_graph` a `has_four`?
+- Jakou hodnotu budou mít proměnné `is_graph` a `has_four`?
 - Jak lze kód úpravit, aby graf mohl mít 0 hran? (pokud má 1 vrchol, tak má 0 hran a jedná se o graf)
-- pomocí funkce `input` načtěne své jméno do proměnné `name` a následně vypište text "Tvé jméno je Martin a jsi na hodině Pythonu" - místo "Martin" dosaďte obsah proměnné `name` (tedy své jméno)
+- pomocí funkce `input` načtěte své jméno do proměnné `name` a následně vypište text "Tvé jméno je Martin a jsi na hodině Pythonu" - místo "Martin" dosaďte obsah proměnné `name` (tedy své jméno)
 
 ## Řetězce
 
@@ -110,23 +110,23 @@ Dále funguje také dotazování na pozice od zadu (záporná adresace). Posledn
 
 ### 1.2.{1-3} Řetězce
 
-- Vypište počet znaků ve vašem jméně. Pro načtení jména použijte funkci `input()`
-- vypište 3. znak z vašeho jména
-- vypište poslední znak z vašeho jména
+- Vypište počet znaků ve vašem jméně. Pro načtení jména použijte funkci `input()`.
+- Vypište 3. znak z vašeho jména.
+- Vypište poslední znak z vašeho jména.
 
 > ## Řetězce formátování
 >
-> Jednotlivé řetězce jsou spojovat pomoci operátoru `+` nebo lze využít moderní přístup tzv. f-strings. Stačí před úvozovky řetězce dát písmeno `f` a v řetezci lze do závorek `{}` napsat promněnou, která si při zpracování nahradí svojí hodnotou.
+> Jednotlivé řetězce jdou spojovat pomoci operátoru `+` nebo lze využít moderní přístup tzv. f-strings. Stačí před uvozovky řetězce dát písmeno `f` a v řetezci lze do závorek `{}` napsat proměnnou, která si při zpracování nahradí svojí hodnotou.
 >
 > ```python
 > game = 'Lineage II'
-> 'Moje neoblíbenější pc hra je' + ' ' + game # výstup -> "Moje neoblíbenější pc hra je Lineage II"
-> f'Moje neoblíbenější pc hra je {game}' # výstup -> "Moje neoblíbenější pc hra je Lineage II"
+> 'Moje nejoblíbenější pc hra je' + ' ' + game # výstup -> "Moje nejoblíbenější pc hra je Lineage II"
+> f'Moje nejoblíbenější pc hra je {game}' # výstup -> "Moje nejoblíbenější pc hra je Lineage II"
 > ```
 
 ### 1.2.4 Řetězce
 
-Vypište následující text s použitím pouze jednoho volání funkce print, `jméno` a `počet` nepište do textu napřímo ale uložte si je do promněné a ty využijte pro výpis.
+Vypište následující text s použitím pouze jednoho volání funkce print, `jméno` a `počet` nepište do textu napřímo, ale uložte si je do proměnné a ty využijte pro výpis.
 
 ```python
 Jmenuji se {vaše jméno} a na Strahově jsem již {počet} let
