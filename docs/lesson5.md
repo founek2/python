@@ -1,6 +1,6 @@
 # 5. Lekce
 
-### 2.2.1 Kalkulačka - zjednodušená II
+### 5.1.1 Kalkulačka - zjednodušená II
 
 Využijte již naprogramovanou zjednodušenou kalkulačku, ale místo použití 3 promněných pro každou hodnotu, která se načítá od uživatele využijte list a cyklus. Stejně tak pro hlášky, které vypisujete uživateli.
 
@@ -40,7 +40,7 @@ else:
     print('Unable to kill')
 ```
 
-### 4.1.1 Cvičení funkce
+### 5.2.1 Cvičení funkce
 
 - napište funkci `add`, která vezme dva argumenty a vrátí jejich součet
     `add(4, 6) -> 10`
@@ -56,7 +56,7 @@ numbers = [1, 2, 4]
 show(numbers) # -> nic nemusí vracet
 ```
 
-### 4.1.2 Výpočet součtu
+### 5.2.2 Výpočet součtu
 
 Napište program, který se uživatele bude dokola ptát na číslo. Toto číslo budete přičítat k dosavadnímu celkovému součtu předchozích čísel. (Využijte předchozí funkci `add`, kterou jste si napsali)
 
@@ -85,7 +85,7 @@ text = 'Příliš žluťoučký kůň úpěl ďábelské ódy'
 text.split(' ')     # -> ['Příliš', 'žluťoučký', 'kůň', 'úpěl', 'ďábelské', 'ódy']
 ```
 
-### 4.2.1 Statistika listu
+### 5.3.1 Statistika listu
 
 Napište tyto 3 funkce:
 
@@ -113,15 +113,3 @@ sum: {součet hodnot}
 ```
 
 <!-- Nejprve napsat vše do cyklu, potom vylepšit separací kódu do funkce-->
-
-### 4.3.1 Kalkulačka podruhé
-
-Program se zeptá na číslo, operátor, číslo -> ověří že čísla jsou čísla a operátor je známý operátor (pokud operátor neznáme, tak vypíšeme hlášku "neznámý operátor" a zeptáme se na něj znovu) -> ukáže výsledek a znovu se ptá, pokud uživatel vloží nyní jako první operátor a pak číslo, tak kalkulačka spočte `předchozí výsledek, operátor, nové číslo` a ukáže výsledek. Takto lze opakovat do nekonečna. Program se ukončí pokud kdykoliv na vstup uživatel napíše 'q'.
-
-[Referenční_řešení](_examples/calc_hard)
-
-## Další implementace kalkulačky
-
-[Referenční](_examples/calc_normal)
-
-[Referenční s nebezpečnou funkcí eval](_examples/calc_eval)

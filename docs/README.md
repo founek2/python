@@ -8,13 +8,17 @@
 
 [Lekce 3.](lesson3.md ':include')
 
-[Lekce 4. ](lesson4.md ':include')
+[Lekce 4.](lesson4.md ':include')
 
-[\_](lesson5.md ':include')
+[Lekce 5.](lesson5.md ':include')
 
-[\_](lesson6.md ':include')
+[Lekce 6.](lesson6.md ':include')
 
-[\_](workshop.md ':include')
+[Lekce 7.](lesson7.md ':include')
+
+[Lekce 8.](lesson8.md ':include')
+
+[Workshop](workshop.md ':include')
 
 [Časový rozvrh](timetable.md ':include')
 
